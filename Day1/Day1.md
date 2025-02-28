@@ -253,6 +253,14 @@
 
 #### 4. list item < li >
 
+```html
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+```
+
 ### Images (Inline-block element)
 
 #### 1. src -> source of the image (compulsary)
@@ -262,6 +270,9 @@
 #### 3. width -> width of the image
 
 #### 4. height -> height of the image
+``` html
+    <img src="https://via.placeholder.com/150" alt="Placeholder">
+```
 
 ### Audio(inline element)
 
@@ -269,4 +280,25 @@
 
 #### 2. controls -> adds controls to the audio
 
-### 
+``` html
+    <audio src="https://www.soundjay.com/human/sounds/bell-ringing-01.wav" controls></audio>
+```
+
+### Video
+
+#### 1. src -> source of the video
+
+#### 2. controls -> adds controls to the video
+
+``` html
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+```
+
+### Anchor Tag
+
+#### 1. href -> source of the link
+
+#### 2. target -> where to open the link
+```html
+    <a href="https://www.google.com" target="_blank">Google</a>
+```
