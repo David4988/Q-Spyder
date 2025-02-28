@@ -298,7 +298,15 @@
 
 #### 1. href -> source of the link
 
-#### 2. target -> where to open the link
+#### 2. target -> where to open the link (blank, self, parent, top)
+
 ```html
     <a href="https://www.google.com" target="_blank">Google</a>
 ```
+
+### Image with Anchor Tag
+
+#### * Makes image clickable and links to specified URL
+```html
+    <a href="https://www.google.com">
+
