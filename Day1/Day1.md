@@ -252,3 +252,21 @@
 #### 3. description list < dl >
 
 #### 4. list item < li >
+
+### Images (Inline-block element)
+
+#### 1. src -> source of the image (compulsary)
+
+#### 2. alt -> alternative text for the image
+
+#### 3. width -> width of the image
+
+#### 4. height -> height of the image
+
+### Audio(inline element)
+
+#### 1. src -> source of the audio
+
+#### 2. controls -> adds controls to the audio
+
+### 
