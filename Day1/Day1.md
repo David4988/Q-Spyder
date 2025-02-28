@@ -309,4 +309,16 @@
 #### * Makes image clickable and links to specified URL
 ```html
     <a href="https://www.google.com">
+        <img src="https://via.placeholder.com/150" alt="Placeholder">
+    </a>
+```
 
+### Table
+
+#### 1. table < table >
+
+#### 2. table row < tr >
+
+#### 3. table data < td >
+
+### 
