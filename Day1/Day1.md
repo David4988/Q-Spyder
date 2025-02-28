@@ -160,3 +160,93 @@
 ```html
     <div title="Additional Information">Hello</div>
 ```
+
+### heading tags:
+
+     -> h1 -> 2 em
+     -> h2 -> 1.5 em
+     -> h3 -> 1.17 em
+     -> h4 -> 1 em
+     -> h5 -> 0.83 em
+     -> h6 -> 0.67 em
+
+#### Understanding Heading Tags
+
+#### * Heading tags (h1 to h6) are used to define HTML headings on a webpage
+
+#### * Key characteristics:
+    -> Block-level elements
+    -> Create a hierarchical structure
+    -> h1 is most important, h6 is least important
+    -> Should be used in order (h1 -> h2 -> h3, etc.)
+
+#### * Example usage:
+
+    <h1>Main Title of the Page</h1>
+    <h2>Major Sections</h2>
+    <h3>Sub-sections</h3>
+    <h4>Sub-sub-sections</h4>
+
+#### * Best Practices:
+    -> Use only one h1 per page
+    -> Don't skip heading levels
+    -> Use for structure, not styling
+    -> Important for SEO and accessibility
+
+### Paragraph Tag (<p>)
+
+#### * Block-level element used for text content
+
+#### * Characteristics:
+    -> Adds automatic margins
+    -> Cannot contain other p tags
+    -> Most common text container
+
+#### * Example:
+
+    <p>This is a paragraph of text.</p>
+    <p>Another paragraph with <span>inline content</span>.</p>
+
+### Formatting Tags
+
+#### 1. bold < b >
+
+#### 2. italic < i >
+
+#### 3. underline < u >
+
+#### 4. highlight < mark >
+
+### Non-semantic tags
+
+#### 1. div < div >
+
+#### 2. span < span >
+
+### Semantic Tags (introduced in HTML5)
+
+#### * tags which has its own purpose
+
+#### * block-level elements
+
+#### * increases code readability and SEO
+
+#### 1. header < header >
+
+#### 2. footer < footer >
+
+#### 3. section < section >
+
+#### 4. article < article >
+
+#### 5. main <  >
+
+#### 6. navbar < nav >
+
+### Lists
+
+#### 1. ordered list < ol >
+
+#### 2. unordered list < ul >
+
+
