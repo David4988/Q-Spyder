@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form</title>
+</head>
+<body>
+<form>
+    <label for="name">Name</label> <!-- name acts like a container(variable) -->
+    <input id="name" name="name" required type="text" placeholder="Enter your name" value="Davidson" minlength="2" /><br><br>
+    <label for="email" >Email</label>
+    <input id="email" name="email" required type="email" placeholder="example@gmail.com"/><br><br>
+    <label>Gender</label>
+    <input type="radio" name="Gender" value="Male" >
+    <label >Male</label>
+    <input type="radio" name="Gender" value="Female">
+    <label >Female</label><br><br>
+    <fieldset>
+        <legend>Job deets</legend>
+        <label>Skills</label>
+        <input type="checkbox" name="Skills" id="HTML" value="HTML">HTML
+        <input type="checkbox" name="Skills" id="CSS" value="CSS">CSS
+        <input type="checkbox" name="Skills" id="Javascript" value="Javascript">JavaScript
+        <br><br><label for="">Resume</label>
+        <input type="file" multiple name="" id="">
+        <br><br><label for="Linkedin">Linkedin URL</label>
+        <input type="url" name="Linkedin" id="Linkedin">
+        <br><br><label for="Position">Position</label>
+        <select name="Position" id="Position" multiple>
+            <option value="JSDev">JavaScript Developer</option>
+            <option value="JSDev">Java Developer</option>
+            <option value="JSDev">Python Developer</option>
+            <option value="JSDev">C Developer</option>
+            <option value="JSDev">Web Developer</option>
+
+        </select>
+    </fieldset>
+    <br><br>
+    <label >City</label>
+    <select disabled name="state">
+        <option value="">---</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Madurai">Madurai</option>
+    </select>
+    <br><br><label for="address">Address</label>
+    <textarea id="address" name="address"></textarea><br><br>
+    <br><br><label for="age">Age</label>
+    <input id="age" name="age" type="number"/><br><br>
+    <label for="DOB"></label>
+    <input id="DOB" name="DOB" type="date"/><br><br>
+    <br><br>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <button disabled>Disabled</button>
+</form>
+<script>
+    const Name = document.getElementById("name").type;
+    console.log(Name);
+    const Email = document.getElementById("email").type;
+    console.log(Email);
+</script>
+</body>
+</html>
