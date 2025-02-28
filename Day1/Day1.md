@@ -245,7 +245,7 @@
 
 ### Lists
 
-#### 1. ordered list < ol >
+#### 1. ordered list < ol > (type=1,a,A,i,I,start; start = number)
 
 #### 2. unordered list < ul > (type=disc,square, circle, none)
 
