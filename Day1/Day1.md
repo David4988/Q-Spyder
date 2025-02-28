@@ -247,6 +247,8 @@
 
 #### 1. ordered list < ol >
 
-#### 2. unordered list < ul >
+#### 2. unordered list < ul > (type=disc,square, circle, none)
 
+#### 3. description list < dl >
 
+#### 4. list item < li >
