@@ -1,0 +1,61 @@
+<!-- First Name, LastName, Email, Phone Number, DOB, Gender, Address, City, State, Pin code, Pozition Applied for,
+Upload Resume, Skills, Position applied for, LinkedIn profile, Available Start date, Expected Salary, Willing to Relocate-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form&Table</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <label>Personal Deets</label>
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Name: </label>
+                </td>
+                <td>
+                    <input id="name" name="name" required type="text" placeholder="Enter your name" /><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email: </label></td>
+                <td><input id="email" name="email" required type="email" placeholder="example@gmail.com"/><br></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age: </label></td>
+                <td><input id="age" name="age" required type="number" placeholder="Enter your age"/><br></td>
+            </tr>
+            <tr>
+                <td><label for="passwd">Password: </label></td>
+                <td><input id="passwd" name="passwd" required type="password"/><br></td>
+            </tr>
+            <tr>
+                <td><label>Gender: </label></td>
+                <td><input id="male" value="male" required type="radio"/>Male</td>
+                <td><input id="female" value="female" required type="radio"/>Female</td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Job Deets</legend>
+        <table>
+            <tr>
+                <td><label for="Skills"></label></td>
+                <td><select name="Skills" id="Skills">
+                    <option value="JSDev">JavaScript Dev</option>
+                    <option value="JSDev">Java Dev</option>
+                    <option value="JSDev">Python Dev</option>
+                    <option value="JSDev">C Dev</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</body>
+</html>
