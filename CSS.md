@@ -34,3 +34,46 @@ selector {
 
 ### 2. Internal CSS
 
+#### * CSS is applied to the **HTML elements** inside the `<style>` tag.
+
+```css
+<style>
+    p { color: red; }
+</style>
+```
+
+### 3. External CSS
+
+#### * CSS is defined in a separate file.
+
+```html
+<link rel="stylesheet" href="styles.css">
+<p>This is a paragraph.</p>
+```
+
+```css
+p { color: red; }
+```
+
+### Hierarchy between Inline, Internal and External CSS
+
+#### * Inline CSS > Internal CSS > External CSS
+
+```html
+<p style="color: red;">This is a paragraph.</p>
+```
+
+```css
+<style>
+    p { color: red; }
+</style>
+```
+
+```css
+<link rel="stylesheet" href="styles.css">
+<p>This is a paragraph.</p>
+```
+
+```css
+p { color: red; }
+```
