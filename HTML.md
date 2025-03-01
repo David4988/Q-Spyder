@@ -321,4 +321,97 @@
 
 #### 3. table data < td >
 
-### 
+#### 4. table header < th >
+
+#### 5. Attributes
+
+    -> border -> adds border to the table
+    -> width -> width of the table
+    -> height -> height of the table
+    -> align -> alignment of the table
+    -> valign -> vertical alignment of the table
+    -> colspan -> number of columns to span
+    -> rowspan -> number of rows to span
+    -> cellpadding -> padding inside the table
+    -> cellspacing -> padding outside the table
+
+### Forms
+
+#### 1. form < form > (without it, the submit button will not work)
+
+    -> action -> url of the server
+
+#### 2. input < input >
+
+    -> name attrib. -> name of the input(acts as a container for the input, required if you want to submit the form)
+    -> type attrib. -> type of the input
+    -> value attrib. -> value of the input
+    -> placeholder attrib. -> placeholder of the input
+    -> required attrib. -> required input
+    -> minlength attrib. -> minimum length of the input
+    -> maxlength attrib. -> maximum length of the input
+    -> min attrib. -> minimum value of the input
+    -> max attrib. -> maximum value of the input
+
+#### input types
+
+    -> text -> single line text input
+    -> password -> password input
+    -> email -> email input
+    -> number -> number input
+    -> date -> date input
+    -> radio -> radio input
+    -> url -> url input
+    -> checkbox -> checkbox input
+    -> button -> button
+    -> submit -> submit button
+
+#### 3. label < label >
+
+    -> for -> id of the input
+    -> name -> name of the input (acts as a container for the input)
+    -> placeholder -> placeholder of the input
+    -> required -> required input
+
+#### 4. textarea < textarea >
+
+#### 5. select < select >
+
+#### 6. option < option >(used to create dropdown list)
+
+#### 7. button < button > (default type is submit)
+
+#### button types
+
+    -> submit -> submit the form
+    -> reset -> reset the form
+
+#### 8. fieldset < fieldset >
+
+    -> groups related inputs together
+
+#### 9. legend < legend >
+
+    -> naming of fieldset
+
+#### Form attributes
+
+    -> name -> name of the input
+    -> for -> id of the input
+    -> id -> id of the input
+    -> value -> value of the input
+    -> checked -> checked input
+    -> disabled -> disabled input
+    -> required -> required input
+    -> minlength -> minimum length of the input
+    -> maxlength -> maximum length of the input
+    -> min -> minimum value of the input
+    -> max -> maximum value of the input
+    -> multiple -> multiple input
+    -> placeholder -> placeholder of the input
+    -> title -> title of the input
+    -> type -> type of the input
+    -> value -> value of the input
+    -> colspan -> number of columns to span
+    -> rowspan -> number of rows to span
+    -> checked -> checked input
