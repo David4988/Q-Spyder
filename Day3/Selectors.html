@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        *{
+            background: #b5b3b3;
+        }
+        p,div{
+            font-size: 20px;
+        }
+        p{
+            color: red;
+        }
+        .para{
+            color:blue;
+        }
+        #unique{
+            color:green;
+            background-color: black;
+        }
+        p:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a paragraph.</p>
+    <p class="para">This is paragraph with class para.</p>
+    <p id="unique">This is paragraph with id unique.</p>
+    <div class="para">
+        <p>This is a paragraph inside a div.</p>
+    </div>
+    <div>
+        <p  id="unique">This is a paragraph inside a div with id unique.</p>
+    </div>
+</body>
+</html>
