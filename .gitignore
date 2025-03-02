@@ -1,1 +1,19 @@
+# Ignore MSI installer files
+*.msi
+
+# Common additional patterns you might want to add:
+# Windows system files
+Thumbs.db
+desktop.ini
+
+# Visual Studio Code
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log
+
 /Day1.zip
