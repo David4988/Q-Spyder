@@ -985,7 +985,7 @@ index.html
 #### * Sets the radius of the border
 
 ```css
-p { border-radius: 10px; }
+p { border-radius: 10px 12px 14px 16px; } /* top-left, top-right, bottom-right, bottom-left */
 ``` 
 
 index.html
