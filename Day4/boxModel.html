@@ -11,11 +11,8 @@
             background-color: red;
             border-top: 10px solid black;
             border-bottom: 10px solid black;
-            border-top-left-radius: 12px;  
-            border-top-right-radius: 12px;
-            border-bottom-left-radius: 12px;  
-            border-bottom-right-radius: 12px;
-            box-sizing: content-box;
+            /* border-radius: 30% 12%; */
+            box-sizing: border-box;
             /* margin-left: 40px;
             margin-top:100px; */
             /* margin: 40px 100px;/* top right bottom left */
@@ -27,10 +24,7 @@
             background-color: red;
             border-top: 10px solid black;
             border-bottom: 10px solid black;
-            border-top-left-radius: 12px;  
-            border-top-right-radius: 12px;
-            border-bottom-left-radius: 12px;  
-            border-bottom-right-radius: 12px;
+            border-radius: 12px;
             box-sizing: border-box;
             /* margin-left: 40px;
             margin-top:100px; */
@@ -40,20 +34,33 @@
         .margin{
             margin: 40px 100px;
             background-color: rgb(255, 145, 0);
-            border: 2px dotted black;
+            border: 2px dashed black;
         }
         .border{
             border: 2px solid black;
             background-color: yellow;
+            /* border-radius: 24px; */
         }
         .padding{
             padding: 50px;
             background-color: green;
-            border: 2px dotted black;
+            border: 2px dashed black;
         }
         .content{
             background-color: blue;
             border: 2px solid black;
+        }
+        .margin:hover{
+            background-color: red;
+        }
+        .border:hover{
+            background-color: red;
+        }
+        .padding:hover{
+            background-color: red;
+        }
+        .content:hover{
+            background-color: red;
         }
     </style>
 </head>
@@ -69,10 +76,13 @@
         
     </div>
     <div class="margin">
+        margin
         <div class="border">
+            border
             <div class="padding">
+                padding
                 <div class="content">
-                    <h1>Box Model</h1>
+                    <h4>Content</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
                 
                 </div>
