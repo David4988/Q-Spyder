@@ -99,7 +99,7 @@ p { color: red; }
 
 ### 2. ID Selector
 
-#### * Selects the element with the given ID
+#### * Selects the particular element with the given ID
 
 index.html
 
