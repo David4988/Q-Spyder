@@ -922,10 +922,110 @@ p {
     
 }
 ```
+## Border
+
+### 1. Border Width
+
+#### * Sets the width of the border
+
+```css
+p { border-width: 1px; }
+```
+
+index.html
+
+```html
+<p>This is a paragraph.</p>
+```
+
+### 2. Border Style
+
+#### * Sets the style of the border
+
+```css
+p { border-style: solid; }
+```
+
+index.html
+
+```html
+<p>This is a paragraph.</p>
+```
+
+### 3. Border Color
+
+#### * Sets the color of the border
+
+```css
+p { border-color: red; }
+```
+
+index.html
+
+```html
+<p>This is a paragraph.</p>
+```
+
+### 4. Border Shorthand
+
+#### * Sets the border of the element -> width, style, color
+
+```css
+p { border: 1px solid red; }
+```
+
+index.html
+
+```html
+<p>This is a paragraph.</p>
+```
+
+### 5. Border Radius
+
+#### * Sets the radius of the border
+
+```css
+p { border-radius: 10px 12px 14px 16px; } /* top-left, top-right, bottom-right, bottom-left */
+``` 
+
+index.html
+
+```html
+<p>This is a paragraph.</p>
+```
+
+### 6. Border Image
+
+#### * Sets the image of the border
+
+```css
+p { border-image: url('image.jpg') 10; }
+```
+
+index.html
+
+```html
+<p>This is a paragraph.</p>
+```
+
+### 7. Border Image Shorthand
+
+#### * Sets the border image of the element -> image, width, repeat
+
+```css
+p { border-image: url('image.jpg') 10 repeat; }
+```
+
+index.html
+
+```html
+<p>This is a paragraph.</p>
+```
 
 ## Box Model
 
 ### Has 4 parts:
+
     1. Margin
     2. Border
     3. Padding
@@ -967,8 +1067,10 @@ index.html
 
 #### * Sets the space outside the border
 
+#### * Don't use it too much, as it will waste space on the page
+
 ```css
-p { margin: 10px; }
+p { margin: 10px 40px 0 20px; } <!--top right bottom left-->
 ```
 
 index.html
@@ -978,3 +1080,22 @@ index.html
     <p>This is a paragraph.</p>
 </div>
 ```
+
+### 4. Box-sizing
+
+#### * Sets the box-sizing of the element
+
+#### * Default is content-box (height/width only apply to the content)
+
+#### * border-box (height/width apply to the content, padding, and border) (almost mandatory)
+
+```css
+p { box-sizing: border-box; }
+```
+
+index.html
+
+```html
+<div>
+    <p>This is a paragraph.</p>
+</div>
