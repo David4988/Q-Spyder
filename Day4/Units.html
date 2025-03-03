@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+        .absolute{
+            width: 1000px;
+            height: 100px;
+            background-color: red;
+            
+            top: 50px;
+            left: 50px;
+        }
+        .Relative{
+            width: 150vh;
+            height: 50%;
+            background-color: blue;
+            
+            top: 50px;
+            left: 50px;
+        }
+        .parent{
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            
+        }
+        .child{
+            width: 50%;
+            height: 50%;
+            background-color: yellow;
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="absolute">
+        <h1>
+            Absolute Units
+        </h1>
+    </div>
+    <br><br><br><br><br><br><br>
+    
+    <div class="Relative">
+        <h1>
+            Relative Units
+        </h1>
+    </div>
+    <div class="parent">
+        <div class="child">
+            <DIV></DIV>
+        </div>
+    </div>
+</body>
+</html>
