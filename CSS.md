@@ -1067,6 +1067,8 @@ index.html
 
 #### * Sets the space outside the border
 
+#### * accepts negative values also
+
 #### * Don't use it too much, as it will waste space on the page
 
 ```css
@@ -1084,6 +1086,8 @@ index.html
 ### 4. Box-sizing
 
 #### * Sets the box-sizing of the element
+
+#### * Used to restrict height and width of the element
 
 #### * Default is content-box (height/width only apply to the content)
 
