@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specifity</title>
+    <style>
+        #unique{
+            color:green;
+            background-color: black;
+        }
+        .para{
+            color:blue;
+        }
+        p{
+            color: red;
+        }
+        *{
+            background: #b5b3b3;
+        }
+    </style>
+</head>
+<body>
+    <p id="unique" class="para">A para with id, class, element and universal selector</p>
+    <p class="unique">A para</p>
+</body>
+</html>
