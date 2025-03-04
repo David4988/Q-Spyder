@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Medium Clone</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <style>
+        /* Reset default styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
+        /* Navigation section */
         section {
             display: flex;
             background-color: #F7F4ED;
@@ -21,30 +25,38 @@
             justify-content: space-around;
             align-items: center;
         }
+
         article {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             height: 80%;
             width: 80%;
         }
+
         section article aside {
             display: flex;
             justify-content: space-between;
             padding: 10px;
         }
+
         section article aside:first-child {
             font-size: 30px;
             font-weight: 600;
             font-family: 'Montserrat', sans-serif;
         }
+
         ul {
             display: flex;
-            justify-content: space-between;
             list-style: none;
+            gap: 25px;
+            align-items: center;
         }
+
         li {
-            padding: 25px;
+            padding: 10px 20px;
         }
+
         li:last-child {
             background-color: #191919;
             color: white;

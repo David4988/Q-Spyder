@@ -1199,9 +1199,9 @@ index.html
 
 ### 3. Flex
 
-#### * Sets the display of the element to flex
+#### * used to create a flexible layout
 
-#### * how to align items in x-axis and y-axis
+#### * used to align items in x-axis and y-axis
 
     x-axis -> main axis
 
@@ -1221,7 +1221,7 @@ index.html
 
     ❌ gap -> space between the items (10px, 10px 20px, 10px 20px 30px)
 
-
+    ❌ order -> change the order of the items (1, 2, 3), default is 0 (higher the number, the later it will appear)
 
 #### * Used to create a flexible layout
 
@@ -1238,6 +1238,7 @@ index.html
     <p>This is a paragraph.</p>
 </div>
 ```
+ 
 #### Flex container
 
 #### * The parent element of the flex items
@@ -1254,8 +1255,48 @@ index.html
     
     5.align-content: to wrapped content in cross-axis(start,end,center, flex-start, flex-end, space-between, space-around, space-evenly)
 
-    6. gap: space between the items (row-gap, column-gap)
+    6. flex-direction: changing direction of the main axis (row, row-reverse, column, column-reverse)
 
-    7. flex-direction: changing direction of the main axis (row, row-reverse, column, column-reverse)
+    7. order: changing the order of the items (1, 2, 3), default is 0 (higher the number, the later it will appear)
+
+    8. gap: space between the items (row-gap, column-gap)
     
-    
+## Position
+
+### 1. Static
+
+#### * Default position of the element
+
+#### * The element will be positioned according to the normal flow of the document
+
+```css
+div { position: static; }
+```
+
+index.html
+
+```html
+<div>This is a static div.</div>
+```
+
+### 2. Relative
+
+#### * The element will be positioned according to its original position
+
+#### * Leaves an empty space that cannot be occupied by other elements
+
+```css
+div { position: relative; top: 10px; left: 10px; }
+```
+
+index.html 
+
+```html
+<div>This is a relative div.</div>
+```
+
+### 3. Absolute
+
+#### * The element will be positioned according to the nearest positioned ancestor
+
+#### * It starts to float from its position.
