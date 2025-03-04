@@ -875,7 +875,6 @@ index.html
     4. 100% 50% -> scales the image to 100% of the element(width) and 50% of the element(height)
 
 
-
 ```css
 p { background-size: cover; }
 ```
@@ -1022,6 +1021,7 @@ index.html
 <p>This is a paragraph.</p>
 ```
 
+
 ## Box Model
 
 ### Has 4 parts:
@@ -1115,3 +1115,147 @@ index.html
     box-sizing: border-box;
     }
 ```
+
+### 5. Box-shadow
+
+#### * Adds a shadow to the element
+
+#### * Can be used to create a card effect
+
+#### * Can use negative values to create an inset shadow
+
+```css
+div{ box-shadow: 10px 10px 40px 20px red; } /* x-axis y-axis blur spread color inset */
+```
+
+index.html
+
+```html
+<div>
+    <p>This is a paragraph.</p>
+</div>
+```
+## Display
+
+### 1. Display
+
+#### * Sets the display of the element
+
+#### * Can change a block element to an inline element and vice versa
+
+#### * attributes: inline, block, inline-block, flex, grid, none
+
+```css
+div { display: inline; }
+```
+
+index.html
+
+```html
+<div>This is an inline div.</div>
+```
+
+### 2. Inline
+
+#### * Sets the display of the element to inline
+
+```css
+div { display: inline; }
+```
+
+index.html
+
+```html
+<div>This is an inline div.</div>
+```
+
+### 2. Block
+
+#### * Sets the display of the element to block
+
+```css
+div { display: block; }
+```
+
+index.html
+
+```html
+<div>This is a block div.</div>
+```
+
+### 3. Inline-block
+
+#### * Sets the display of the element to inline-block
+
+```css
+div { display: inline-block; }
+```
+
+index.html
+
+```html
+<div>This is an inline-block div.</div>
+```
+
+### 3. Flex
+
+#### * Sets the display of the element to flex
+
+#### * how to align items in x-axis and y-axis
+
+    x-axis -> main axis
+
+    y-axis -> cross axis
+
+    ❌ justify-content -> align items on the main axis (center, flex-start, flex-end, space-between, space-around, space-evenly)
+
+    ❌ align-items -> align items on the cross axis (center, flex-start, flex-end, space-between, space-around, space-evenly)
+
+    ❌ align-content -> align items on the cross axis (start,end,center, flex-start, flex-end, space-between, space-around, space-evenly)
+
+#### * **align-content** will only work **if the flex-wrap is present**
+
+    ❌ flex-direction -> change the direction of the main axis (row, row-reverse, column, column-reverse)
+
+    ❌ flex-wrap -> wrap the items (nowrap, wrap, wrap-reverse)
+
+    ❌ gap -> space between the items (10px, 10px 20px, 10px 20px 30px)
+
+
+
+#### * Used to create a flexible layout
+
+#### * attributes: flex-direction, flex-wrap, justify-content, align-items, align-content, flex-grow, flex-shrink, flex-basis
+
+```css
+div { display: flex; }
+```
+
+index.html
+
+```html
+<div>
+    <p>This is a paragraph.</p>
+</div>
+```
+#### Flex container
+
+#### * The parent element of the flex items
+
+#### * attributes: flex-direction, flex-wrap, justify-content, align-items, align-content, flex-grow, flex-shrink, flex-basis
+
+    1. display:flex;
+    
+    2.justify-content: main-axis(center, flex-start, flex-end, space-between, space-around, space-evenly)
+
+    3. align-items: cross-axis(center, flex-start, flex-end, space-between, space-around, space-evenly)
+
+    4. flex-wrap: wrapping content(nowrap, wrap, wrap-reverse)
+    
+    5.align-content: to wrapped content in cross-axis(start,end,center, flex-start, flex-end, space-between, space-around, space-evenly)
+
+    6. gap: space between the items (row-gap, column-gap)
+
+    7. flex-direction: changing direction of the main axis (row, row-reverse, column, column-reverse)
+    
+    
