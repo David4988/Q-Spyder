@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Position Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .sticky{
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top:0;
+        }
+        .content {
+            padding: 20px;
+            height: 4000px; /* Just to create a scrollable area */
+        }
+    </style>
+</head>
+<body>
+    <p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos commodi assumenda error sed similique, maxime qui, nemo nostrum voluptates natus cumque, perferendis aspernatur magni laboriosam veritatis nesciunt laudantium sunt? Ullam.</p></p>
+    <header class="sticky">Sticky Header</header>
+    <div class="content">
+        <p>Scroll down to see the sticky header in action.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <!-- Add more content here to make the page scrollable -->
+    </div>
+</body>
+</html>
