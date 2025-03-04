@@ -1300,3 +1300,35 @@ index.html
 #### * The element will be positioned according to the nearest positioned ancestor
 
 #### * It starts to float from its position.
+
+#### * By default, position absolute works w.r.t the body tag.
+
+#### * To make it work w.r.t the parent element, use ``position: relative`` to the parent element;
+
+```css
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            width: 50%;
+            border: 2px solid black;
+            position: relative;
+        }
+        div:first-child{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        div:last-child{
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            position: absolute;
+            top:0
+        }
+```
+
