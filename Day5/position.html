@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        div{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .first{
+            height:100px;
+            width:250px;
+            background-color:red;
+            position:static;
+        }
+        .second{
+            height:100px;
+            width:200px;
+            background-color:blue;
+            position: relative;
+            
+        }
+        .third{
+            height:100px;
+            width:150px;
+            background-color:green;
+            position:relative;
+        }
+        .fourth{
+            height:100px;
+            width:100px;
+            background-color:violet;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+    a
+    </div>
+    <div class="second">b
+    </div>
+    <div class="third">c
+    </div>
+    <div class="fourth">
+        d
+    </div>
+</body>
+</html>
