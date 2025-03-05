@@ -1289,7 +1289,7 @@ index.html
 div { position: relative; top: 10px; left: 10px; }
 ```
 
-index.html 
+index.html
 
 ```html
 <div>This is a relative div.</div>

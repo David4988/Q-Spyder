@@ -414,4 +414,3 @@
     -> value -> value of the input
     -> colspan -> number of columns to span
     -> rowspan -> number of rows to span
-    -> checked -> checked input
