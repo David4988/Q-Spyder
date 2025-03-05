@@ -15,4 +15,5 @@ desktop.ini
 
 # Log files
 *.log
+*.json
 /Day1.zip
