@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task-Jio Saavan</title>
+    <!-- Font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -17,23 +19,49 @@
                 <li>Pro</li>
             </ul>
         </aside>
-        <aside>
-            <input type="text" placeholder="Search" class="pl-40 pr-20  py-3 border border-[#EDEDED] bg-white rounded-3xl w-full"></input>
+        <aside class="relative">
+            <input type="text" placeholder="Search" class="  pl-40 pr-20  py-3 border border-[#EDEDED] bg-white rounded-3xl w-full"><i class="fa-solid fa-magnifying-glass absolute left-[139px] top-[19px]"></i></input>
         </aside>
         <aside>
-            <ul class="flex mr-4 gap-7 items-center font-semibold">
-                <li>
-                    <p>Music Languages</p>
-                    <p class="text-sm font-normal">Japanese</p>
+            <ul class="flex mr-4 gap-9 items-center font-semibold">
+                <li class="relative gap-3">
+                    <div>
+                        <p>Music Languages</p>
+                        <p class="text-sm font-normal">Japanese</p>
+                    </div>
+                    <i class="fa-solid fa-caret-down gap absolute top-3 left-[130px]"></i>
                 </li>
                 <li>Login</li>
                 <li>Sign up</li>
             </ul>
         </aside>
     </nav>
-    <section class="flex items-center justify-center h-[500px] w-full">
-        <div class="flex flex-col items-center justify-center gap-4">
-            
+    
+    <!-- Page -->
+    <section class="flex items-center justify-center h-screen w-full bg-[#F6F6F6]">
+        <!-- Sidebar -->
+        <div class="flex flex-col items-center overflow-hidden gap-8 w-1/4 h-screen bg-[#F6F6F6] border-r-[#EDEDED] border-2">
+            <div class="flex flex-col py-10 gap-5">
+                <h3 class=" font-bold">BROWSE</h3>
+                <ul class="flex flex-col gap-3 font-semibold">
+                    <li>New Releases</li>
+                    <li>Top Charts</li>
+                    <li>Top Playlists</li>
+                    <li>Podcasts</li>
+                    <li>Top Artists</li>
+                    <li>Radio</li>
+                </ul>
+            </div>
+            <div class="flex flex-col gap-5">
+                <h3 class="font-bold">LIBRARY</h3>
+                <ul class="flex flex-col gap-3 font-semibold relative">
+                    <li><i class="fa-solid fa-clock-rotate-left absolute right-[100px] top-1"></i>History</li>
+                    <li><i class="fa-solid fa-music absolute right-[100px] top-11"></i>Liked Songs</li>
+                    <li><i class="fa-solid fa-compact-disc absolute right-[100px] top-[80px]"></i>Albums</li>
+                    <li>Podcasts</li>
+                    <li>Artists</li>
+                </ul>
+            </div>
         </div>
     <section class="flex justify-center items-center h-[500px] w-full">
         
