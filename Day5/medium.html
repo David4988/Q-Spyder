@@ -4,80 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medium Clone</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Warang+Citi&family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monomakh&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Warang+Citi&family=Quintessential&display=swap" rel="stylesheet">
     <style>
-        /* Reset default styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        /* Navigation section */
-        section {
-            display: flex;
-            background-color: #F7F4ED;
-            height: 100px;
-            width: 100%;
-            justify-content: space-around;
-            align-items: center;
+        section article aside p{
+            font-size: 1.5rem;
+            font-family: "Monomakh", system-ui;
         }
-
-        article {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80%;
-            width: 80%;
+        section article h1{
+            font-size: 5rem;
+            font-family: 'Quintessential', serif;
         }
-
-        section article aside {
-            display: flex;
-            justify-content: space-around;
-            
-        }
-
-        section article aside:first-child {
-            font-size: 30px;
-            font-weight: 600;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-            align-items: center;
-        }
-
-        li {
-            padding: 10px 20px;
-        }
-
-        li:last-child {
-            background-color: #191919;
-            color: white;
-            border-radius: 30px;
+        #ul{
+            color:grey;
         }
     </style>
 </head>
-<body>
-    <section>
-        <article>
-            <aside>Medium</aside>
-            <aside>
-                <ul>
-                    <li>Our Story</li>
-                    <li>Membership</li>
-                    <li>Write</li>
-                    <li>Sign in</li>
-                    <li>Get started</li>
-                </ul>
-            </aside>
+<body class="bg-[#F7F4ED]">
+    <header class="sticky top-0 z-50 bg-[#F7F4ED]">
+        <section class="flex items-center justify-between h-20 w-full border-b-2 border-black">
+            <article class="flex items-center justify-between h-4/5 w-full m-10">
+                <aside ><p class="text-4xl font-extrabold">Medium</p></aside>
+                <aside class="flex ml-2">
+                    <ul class="flex items-center gap-2 list-none text-sm font-medium">
+                        <li class="px-3 py-2"><a href="#">Our Story</a></li>
+                        <li class="px-3 py-2"><a href="#">Membership</a></li>
+                        <li class="px-3 py-2"><a href="#">Write</a></li>
+                        <li class="px-3 py-2"><a href="#">Sign in</a></li>
+                        <li class="px-5 py-2 bg-black text-white rounded-full"><button type="button">Get started</button></li>
+                    </ul>
+                </aside>
+            </article>
+        </section>
+    </header>
+    
+    <section class="flex justify-center items-center h-full w-full">
+        <article class="relative left-0 px-7 h-2/5">
+            <h1 class="text-9xl font-semibold py-5">Human</h1>
+            <h1 class="text-9xl font-semibold py-5">stories & ideas</h1>
+            <p class="text-2xl font-normal py-5">A place to read, write, and deepen your understanding</p>
+            <button class="bg-black text-white rounded-full px-10 py-4" type="submit">Start reading</button>
         </article>
+        <div class="overflow-hidden object-cover" style="width: 540px; height: 550px;">
+            <img src="./medium-img.webp" alt="medium" class="object-cover h-full w-full">
+        </div>
     </section>
+    <footer>
+        <section class="flex justify-center items-center h-20 w-full border-t-2 border-black">
+            <ul id="ul"class="flex justify-center list-none gap-10 text-sm">
+                <li>Help</li>
+                <li>Status</li>
+                <li>About</li>
+                <li>Career</li>
+                <li>Press</li>
+                <li>Blog</li>
+                <li>Privacy</li>
+                <li>Terms</li>
+                <li>Text to speech</li>
+                <li>Teams</li>
+            </ul>
+        </section>
+    </footer>
 </body>
 </html>
