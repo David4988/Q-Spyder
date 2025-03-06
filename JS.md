@@ -63,3 +63,98 @@
     1. Internal -> using the script tag in the head or body section
 
     2. External -> using the script tag in the head or body section
+
+``` js
+    var a = 10;
+    console.log(a);
+
+    const b = () => {
+        console.log("Hello World");
+    }
+    b();
+```
+
+## Basic Rules for Keywords
+
+    1. Cannot be used as identifiers
+
+    2. Cannot be used as variables, functions, labels, etc.
+
+## Basic Rules for Identifiers
+
+
+    1. Identifiers must start with a letter, underscore(_) or dollar($) sign
+
+    2. Identifiers can contain letters, digits, underscores and dollar signs
+
+    3. Cannot contain spaces or special characters
+
+    4. Cannot start with numbers
+    
+
+## Variables
+
+    1. Variables are used like a container that stores data
+
+    2. Variables are declared using the var, let or const keyword
+
+|  | var | let | const |
+| :--- | :---: | :---: | :---: |
+| Declaration | yes | yes | no |
+| Initialization | yes | yes | no |
+| Declaration + Initialization | yes | yes | yes |
+| Redeclaration | yes | no | no |
+| Reinitialization | yes | yes | no |
+| Reinitialization + Redeclaration | yes | no | no |
+
+## Data Types
+
+    1. Primitive Data Types (Basic Data Types) -> number, string, boolean, null, undefined
+
+        -> stored as value
+        -> stores simple data
+        -> used for simple operations
+        -> immutable
+
+
+
+    2. Non-Primitive Data Types (careated using basic data types) -> object, array, function
+    
+        -> stores as reference
+        -> stores complex data
+        -> used for complex operations
+        -> mutable
+
+## Objects
+
+    -> any programmable entity that can represent a real world entity
+
+## Conditional Statements
+
+    -> used to execute different blocks of code based on different conditions
+
+    -> if, else if, else
+
+    -> ternary operator
+    
+## Itration Statements
+
+    -> used to execute a block of code multiple times
+
+    -> for, while, do while
+
+    for(initialization; condition; increment/decrement){
+        //code to be executed
+    }
+
+
+    while(condition){
+        //code to be executed
+    }
+    
+
+    do{
+        //code to be executed
+    }while(condition);
+
+    -> for in, for of
