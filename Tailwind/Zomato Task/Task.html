@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato</title>
+    <!-- Font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg_img{
+            background-image: url(./assets/Zomato-hero.webp);
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="relative flex h-screen w-full">
+        <!--Navbar Section-->
+        <section class="flex flex-col h-4/6 cover w-full bg_img gap-7">
+            <aside class="flex justify-between items-center relative h-20 w-full px-14">
+                <aside class="text-white"><img src="./assets/get-the-app-icon.svg" alt="" class="absolute top-9 left-10 cover">Get the App</aside>
+                <aside class="flex justify-around gap-14 ">
+                    <article class="text-white text-lg">Investor Relations</article>
+                    <article class="text-white text-lg">Add Restaurant</article>
+                    <article class="text-white text-lg">Login</article>
+                    <article class="text-white text-lg">Sign up</article>
+                </aside>
+            </aside>
+            <aside class="flex flex-col gap-4 justify-center items-center">
+                <img src="./assets/logo.webp" alt="" class="h-16">
+                <article class="flex flex-col relative gap-2">
+                    <h3 class="text-white text-4xl">Discover the best food & drinks in Chennai</h3>
+                    <div class="flex gap-7 justify-between items-center bg-white rounded-md h-14">
+                        <input type="text" class="relative pl-8 rounded-md" placeholder=" Chennai"><img src="./assets/location-pin.svg" alt="" class="absolute left-2 "><i class="fa-solid fa-caret-down left-52 absolute"></i>
+                        <p class="text-gray-400 text-xl font-light">|</p>
+                        <input type="text" placeholder="Search for restaurant, cruisine or a dish" class="w-[400px] placeholder:text-gray-600"><img src="./assets/search-icon.svg" alt="" class="absolute left-64">
+                    </div>
+                </article>
+            </aside>
+        </section>
+    </section>
+</body>
+</html>
