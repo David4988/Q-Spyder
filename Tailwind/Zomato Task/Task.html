@@ -8,62 +8,231 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
-        .bg_img{
+        .bg_img {
             background-image: url(./assets/Zomato-hero.webp);
+        }
+        * {
+            font-family: "Montserrat", sans-serif;
+        }
+        .inset-shadow {
+            -webkit-box-shadow: inset 0px -17px 47px 0px rgba(0,0,0,0.61); 
+            box-shadow: inset 0px -17px 47px 0px rgba(0,0,0,0.61);
+        }
+        input[type="radio"] {
+            appearance: none; 
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid #d1d5db; /* Tailwind gray-300 */
+            border-radius: 50%;
+        }
+        input[type="radio"]:hover {
+            border-color: #ef4444; /* Tailwind red-500 */
+        }
+        input[type="radio"]:checked {
+            background-color: #ef4444; /* Tailwind red-500 */
+            border-color: #ef4444; /* Tailwind red-500 */
         }
     </style>
 </head>
 <body>
     <section class="h-screen w-full">
-        <!--Hero Section-->
+        <!-- Hero Section -->
         <section class="flex flex-col mb-20 h-4/6 w-full bg_img gap-7">
             <aside class="flex justify-between items-center relative h-20 w-full px-14">
                 <aside class="text-white"><img src="./assets/get-the-app-icon.svg" alt="" class="absolute top-9 left-10 cover">Get the App</aside>
                 <aside class="flex justify-around gap-14">
                     <article class="text-white text-lg">Investor Relations</article>
-                    <article class="text-white text-lg">Add Restaurant</article>
+                    <article class="text-white text-lg">Add restaurant</article>
                     <article class="text-white text-lg">Login</article>
                     <article class="text-white text-lg">Sign up</article>
                 </aside>
             </aside>
-            <aside class="flex flex-col gap-4 justify-center items-center">
+            <aside class="flex flex-col justify-center items-center gap-12">
                 <img src="./assets/logo.webp" alt="" class="h-16">
-                <article class="flex flex-col relative gap-2">
-                    <h3 class="text-white text-4xl">Discover the best food & drinks in Chennai</h3>
-                    <div class="flex gap-7 justify-between items-center bg-white rounded-md h-14">
-                        <input type="text" class="relative pl-8 rounded-md" placeholder=" Chennai"><img src="./assets/location-pin.svg" alt="" class="absolute left-2 "><i class="fa-solid fa-caret-down left-52 absolute"></i>
+                <article class="flex flex-col relative gap-8">
+                    <h3 class="text-white font-medium text-4xl">Discover the best food & drinks in Chennai</h3>
+                    <div class="flex gap-7 justify-around items-center bg-white rounded-md h-14">
+                        <input type="text" placeholder=" Chennai" class="relative pl-8 rounded-md focus:outline-none"><img src="./assets/location-pin.svg" alt="" class="absolute left-5 "><i class="fa-solid fa-caret-down left-52 absolute"></i>
                         <p class="text-gray-400 text-xl font-light">|</p>
-                        <input type="text" placeholder="Search for restaurant, cruisine or a dish" class="w-[400px] pl-4 placeholder:text-gray-600"><img src="./assets/search-icon.svg" alt="" class="absolute left-[270px]">
+                        <input type="text" placeholder="Search for restaurant, cruisine or a dish" class="w-[400px] placeholder:text-gray-600 focus:outline-none"><img src="./assets/search-icon.svg" alt="" class="absolute left-[320px]">
                     </div>
                 </article>
             </aside>
         </section>
-        <section class="flex justify-around items-center">
-            <aside class="w-96 h-64 rounded-md border gap-4 border-gray-400">
+
+        <section class="flex justify-between mx-10 w-11/12 items-center">
+            <aside class="w-96 h-64 rounded-md border gap-4 border-gray-300 hover:scale-110">
                 <div class="h-3/5 rounded-md "><img src="./assets/oder-online.webp" alt="" class="h-full w-full rounded-t-md overflow-hidden object-cover"></div>
-                <div class="flex pt-2 px-3.5 flex-col gap-2">
+                <div class="flex pt-2 px-3.5 flex-col gap-2 bg-white">
                     <h3 class="text-2xl text-gray-700">Order Online</h3>
                     <p class="text-gray-400">Stay home and order to your doorstep</p>
                 </div>
             </aside>
-            <aside class="w-96 h-64 rounded-md border gap-4 border-gray-400">
+            <aside class="w-96 h-64 rounded-md border gap-4 border-gray-300 hover:scale-110">
                 <div class="h-3/5 rounded-md "><img src="./assets/dining.webp" alt="" class="h-full w-full rounded-t-md overflow-hidden object-cover"></div>
-                <div class="flex pt-2 px-3.5 flex-col gap-2">
+                <div class="flex pt-2 px-3.5 flex-col gap-2 bg-white">
                     <h3 class="text-2xl text-gray-700">Dining</h3>
                     <p class="text-gray-400">View the city's favourite dining venues</p>
                 </div>
             </aside>
-            <aside class="w-96 h-64 rounded-md border gap-4 border-gray-400">
+            <aside class="w-96 h-64 rounded-md border gap-4 border-gray-300 hover:scale-110">
                 <div class="h-3/5 rounded-md "><img src="./assets/Live-events.webp" alt="" class="h-full w-full rounded-t-md  overflow-hidden object-cover"></div>
-                <div class="flex pt-2 px-3.5 flex-col gap-2">
+                <div class="flex pt-2 px-3.5 flex-col gap-2 bg-white">
                     <h3 class="text-2xl text-gray-700">Live Events</h3>
                     <p class="text-gray-400">Stay home and order to your doorstep</p>
                 </div>
             </aside>
         </section>
-        <section>
+        <!-- Collections section -->
+        <section class="h-4/6 w-11/12 mx-10 my-24 flex flex-col ">
+            <h2 class="text-4xl font-medium">Collections</h2>
+            <article class="flex flex-col justify-between gap-8">
+                <div class="flex justify-between">
+                    <p class="text-lg text-gray-700">Explore curated lists of top restaurants, cafes, pubs, and bars in Chennai, based on trends</p>
+                    <p class="text-red-600">All collections in Chennai</p>
+                </div>
+                <aside class="flex justify-center items-center gap-4">
+                    <div class="relative h-80 w-72 rounded-lg bg-black">
+                        <img class="overflow-hidden object-cover w-72 h-80 rounded-lg inset-shadow" src="./assets/top-trending-spots.webp" alt="">
+                        <div class="absolute flex flex-col h-80 w-72 top-0 justify-end items-start rounded-lg p-4 inset-shadow">
+                            <span class="text-white text-lg font-medium">
+                                Top Trending Spots
+                            </span>
+                            <span class="text-white">
+                                35 places
+                            </span>
+                        </div>
+                    </div>
+                    <div class="relative h-80 w-72 rounded-lg bg-black">
+                        <img class="overflow-hidden object-cover w-72 h-80 rounded-lg inset-shadow" src="./assets/newly-opened-places.webp" alt="">
+                        <div class="absolute flex flex-col h-80 w-72 top-0 justify-end items-start rounded-lg p-4 inset-shadow">
+                            <span class="text-white text-lg font-medium">
+                                Newly Opened Places
+                            </span>
+                            <span class="text-white">
+                                31 places
+                            </span>
+                        </div>
+                    </div>
+                    <div class="relative h-80 w-72 rounded-lg bg-black">
+                        <img class="overflow-hidden object-cover w-72 h-80 rounded-lg inset-shadow" src="./assets/sea-view-dinning.webp" alt="">
+                        <div class="absolute flex flex-col h-80 w-72 top-0 justify-end items-start rounded-lg p-4 inset-shadow">
+                            <span class="text-white text-lg font-medium">
+                                Sea View Dining
+                            </span>
+                            <span class="text-white">
+                                17 places
+                            </span>
+                        </div>
+                    </div>
+                    <div class="relative h-80 w-72 rounded-lg bg-black">
+                        <img class="overflow-hidden object-cover w-72 h-80 rounded-lg inset-shadow" src="./assets/south-indian-spl.webp" alt="">
+                        <div class="absolute flex flex-col h-80 w-72 top-0 justify-end items-start p-4">
+                            <span class="text-white text-lg font-medium">
+                                South Indian Special
+                            </span>
+                            <span class="text-white">
+                                39 places
+                            </span>
+                        </div>
+                    </div>
+                </aside>
+            </article>
+        </section>
 
+        <!--! Popular localities in and around Chennai -->
+        <section class="h-4/6 w-11/12 mx-10 my-24 flex flex-col gap-12">
+            <h2 class="text-4xl font-medium">Popular localities in and around Chennai</h2>
+            <article class="flex flex-wrap gap-7 justify-around items-center">   
+                    <div class="flex justify-between items-center px-4 border border-gray-200 h-24 w-96 rounded-lg shadow-md">
+                        <aside class="flex flex-col gap-3 justify-around">
+                            <p class="text-xl">T. Nagar</p>
+                            <p class="font-light">388 places</p>
+                        </aside>
+                        <img src="./assets/right caret.svg" alt="">
+                    </div>
+                    <div class="flex justify-between items-center px-4 border border-gray-200 h-24 w-96 rounded-lg shadow-md">
+                        <aside class="flex flex-col gap-3 justify-around">
+                            <p class="text-xl">Numgambakkam</p>
+                            <p class="font-light">344 places</p>
+                        </aside>
+                        <img src="./assets/right caret.svg" alt="">
+                    </div>
+                    <div class="flex justify-between items-center px-4 border border-gray-200 h-24 w-96 rounded-lg shadow-md">
+                        <aside class="flex flex-col gap-3 justify-around">
+                            <p class="text-xl">Velachery</p>
+                            <p class="font-light">552 places</p>
+                        </aside>
+                        <img src="./assets/right caret.svg" alt="">
+                    </div> 
+                    <div class="flex justify-between items-center px-4 border border-gray-200 h-24 w-96 rounded-lg shadow-md">
+                        <aside class="flex flex-col gap-3 justify-around">
+                            <p class="text-xl">Adayar</p>
+                            <p class="font-light">236 places</p>
+                        </aside>
+                        <img src="./assets/right caret.svg" alt="">
+                    </div>
+                    <div class="flex justify-between items-center px-4 border border-gray-200 h-24 w-96 rounded-lg shadow-md">
+                        <aside class="flex flex-col gap-3 justify-around">
+                            <p class="text-xl">Anna Nagar East</p>
+                            <p class="font-light">398 places</p>
+                        </aside>
+                        <img src="./assets/right caret.svg" alt="">
+                    </div>
+                    <div class="flex justify-between items-center px-4 border border-gray-200 h-24 w-96 rounded-lg shadow-md">
+                        <aside class="flex flex-col gap-3 justify-around">
+                            <p class="text-xl">Thuraipakkam</p>
+                            <p class="font-light">388 places</p>
+                        </aside>
+                        <img src="./assets/right caret.svg" alt="">
+                    </div>                      
+                    <div class="flex justify-between items-center px-4 border border-gray-200 h-24 w-96 rounded-lg shadow-md">
+                        <aside class="flex flex-col gap-3 justify-around">
+                            <p class="text-xl">Mylapore</p>
+                            <p class="font-light">192 places</p>
+                        </aside>
+                        <img src="./assets/right caret.svg" alt="">
+                    </div>
+                    <div class="flex justify-between items-center px-4 border border-gray-200 h-24 w-96 rounded-lg shadow-md">
+                        <aside class="flex flex-col gap-3 justify-around">
+                            <p class="text-xl">Alwarpet</p>
+                            <p class="font-light">158 places</p>
+                        </aside>
+                        <img src="./assets/right caret.svg" alt="">
+                    </div>
+                    <div class="flex justify-center items-center gap-4 px-4 border border-gray-200 h-24 w-96 rounded-lg shadow-md">
+                        <aside class="flex gap-3 justify-between">
+                            <p class="text-xl">see more</p>
+                        </aside>
+                        <img src="./assets/down caret.svg" alt="">
+                    </div>
+            </article>
+        </section>
+        <section class="h-4/6 w-full my-24 flex justify-center items-center gap-12 bg-[#FFFBF7]">
+            <article class="h-[410px] w-[450px]">
+                <img src="./assets/get-mobile-app.webp" alt="">
+            </article>
+            <article class="flex flex-col gap-6">
+                <h2 class="text-4xl font-medium px-4">Get the Zomato App</h2>
+                <p>We will send you a link, open it on your phone to download the app</p>
+                <aside class="flex flex-start items-center gap-14">
+                    <div class="flex justify-center items-center gap-2"><input class="" type="radio" name="contact" id="email">Email</div>
+                    <div class="flex justify-center items-center gap-2"><input type="radio" name="contact" id="phone">Phone</div>
+                </aside>
+                <aside class="flex justify-around items-center">
+                    <input type="email" placeholder="Email" required class="h-14 w-80 border-2 border-red-500 rounded-lg p-4">
+                    <button disabled="disabled" class="h-14 w-40 bg-red-500 text-white rounded-lg">Share App Link</button>
+                </aside>
+                <aside class="text-gray-500">Download app from</aside>
+                <aside class="flex justify-start items-center gap-4">
+                    <img src="./assets/get-on-playstore.webp" alt="" class="h-12">
+                    <img src="./assets/download-on-appstore.webp" alt="" class="h-12">
+                </aside>
+            </article>
         </section>
     </section>
 </body>
