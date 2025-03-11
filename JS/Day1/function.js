@@ -113,3 +113,16 @@ const greatest = (a,b,c) => {
 }
 
 console.log(greatest(1,4,3));
+
+//? explicit return => needs a return keyword and '{}'
+
+const explicit = (x,y) =>{
+    return x+y;
+}
+
+//? implicit return => does not need a return and {}, its in a single line
+const implicit = (x,y)=>x+y;
+
+const square =x=> x*x
+//? no need of paranthesis if we have only 1 parameter
+

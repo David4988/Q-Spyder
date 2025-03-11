@@ -46,5 +46,5 @@ const product: Prod = (x, y) => {
     console.log(`Given:\n x=${x}, y=${y}`);
     return x * y;
 };
-console.log("The product of x & y is: "+prod(n1,n2))
+console.log("The product of x & y is: "+product(n1,n2))
 
