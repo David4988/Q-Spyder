@@ -82,7 +82,6 @@
 
 ## Basic Rules for Identifiers
 
-
     1. Identifiers must start with a letter, underscore(_) or dollar($) sign
 
     2. Identifiers can contain letters, digits, underscores and dollar signs
@@ -133,9 +132,9 @@
 
     -> used to execute different blocks of code based on different conditions
 
-    -> if, else if, else
+    -> if, else if, if else, nested if
 
-    -> ternary operator
+    -> ternary operator (condition)?trueStmt:falseStmt
     
 ## Itration Statements
 
@@ -158,3 +157,36 @@
     }while(condition);
 
     -> for in, for of
+
+## Functions
+
+### * Block of code that can be used to perform a particular task whenever we want
+
+### Calling a func -> Invoking a function
+
+```js
+    //Function declaration (function creating)
+function func(){
+    console.log("Good Mourning")
+}
+
+funcECMA6 = () =>{
+    console.log("I'll inform you shorty")
+}
+
+//Function invocation (calling a  function)
+func()
+funcECMA6()
+```
+
+### By default, returns undefined
+
+### Rules: 
+
+    No restrictions
+    
+    Number of parameters may or may not match the number of arguments passed
+
+### *Multiple return statements wont work, as only the first return stmt is considered
+
+### *Even if we return multiple values using the same return stmt, only the latest value is returned
