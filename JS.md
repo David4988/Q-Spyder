@@ -196,13 +196,18 @@ funcECMA6()
     1.Named fn -> A function declared with an identifier
 
     2.First class func -> A function stored as a value to a variable
-                      -> should only call with variable name, not the function
+                       -> should only call with variable name, not the function
     
-    3.Functional Expression -> the whole expression where the 1st class function is stored in a variable
+    3.Functional Expression -> the whole expression of storing a function in a variable
 
     4.Anonymous func -> a functional expression which doesnt have the function name
 
     5. Higher Order function -> a function which accepts another function as an argument
+
+    6. Arrow func ->  a function which is a syntactic sugar for writing functions
+                  -> is of two types
+                    1. Explicit return => needs a return keyword and '{}'
+                    2. Implicit return => does not need a return and {}, its in a single line
 
 ### Eg
 
@@ -260,4 +265,41 @@ console.log("Addition: "+calculate(5,6,sum))
 console.log("Subtraction: "+calculate(5,6,sub))
 console.log("Multiplication"+calculate(5,6,multi))
 console.log("Division"+calculate(5,6,div))
+```
+
+## Arrow function
+
+### 1. No need of function **keyword 'function' and the func. name**
+
+### 2. No need of curly braces if there is a **single statement** and it will automatically return the value(**implicit return**)
+
+### 3. No need of paranthesis if there is a **single parameter**.
+
+### arrow functions are mainly used in callback functions
+
+## Strings
+
+### Collection of characters enclosed between single quotes, double quotes or backticks.
+
+### Back ticks uses "String Interpolation"
+
+Eg
+
+```js
+    let s1 = "John"
+    let age = 28
+    let city = "New York"
+
+    console.log(`I am ${s1}, i am ${age} and I live in ${city}`)
+```
+
+## String Properties
+    
+    -> .length [do not use paranthesis with it]
+    eg. 
+
+```js
+    let s = "Yo, Genki ni shiteiru?"
+    console.log(s.length);
+
 ```
