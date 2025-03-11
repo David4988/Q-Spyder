@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Monomakh&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: "Lilita One", sans-serif;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <!--! Navbar -->
+    <nav class="flex justify-between items-center sticky top-0 h-20 w-full bg-[#0B0E38] px-14">
+        <aside><img src="../assets/logo.png" alt="" class="h-24 w-24"></aside>
+        <aside class="flex justify-center items-center gap-6 text-white pr-5">
+            <button class="h-10 w-20 bg-[#1E40AF] rounded-lg">Home</button>
+            <button class="h-10 w-20 hover:bg-[#1E40AF] rounded-lg">Login</button>
+            <button class="h-10 w-20 hover:bg-[#1E40AF] rounded-lg">Register</button>
+        </aside>
+    </nav>
+        
+        
+    <section class="w-full">
+        <section class="flex flex-col justify-start py-10 gap-7 fixed items-center h-screen w-1/6 bg-gray-900 ">
+            <button class="text-white h-10 w-40 rounded-md bg-gray-800">Explore</button>
+            <aside class="flex flex-col text-white font-light gap-1">
+                <div class="flex justify-center items-center hover:bg-[#E11D48] rounded-xl h-14 w-48"><img src="../assets/popular-albums.svg" alt="" class=""><p>Popular Albums</p></div>
+                <div class="flex justify-center items-center hover:bg-[#E11D48] rounded-xl h-14 w-48"><img src="../assets/only-for-u.svg" alt="" class=""><p>Only for You</p></div>
+                <div class="flex justify-center items-center hover:bg-[#E11D48] rounded-xl h-14 w-48"><img src="../assets/popular-artists.svg" alt="" class=""><p>Popular Artists</p></div>
+                <div class="flex justify-center items-center hover:bg-[#E11D48] rounded-xl h-14 w-48"><img src="../assets/trending-songs.svg" alt="" class=""><p>Trending Songs</p></div>
+                <div class="flex justify-center items-center hover:bg-[#E11D48] rounded-xl h-14 w-48"><img src="../assets/radio-stations.svg" alt="" class=""><p>Radio stations</p></div>
+            </aside>
+        </section>
+    </section>
+</body>
+</html>
