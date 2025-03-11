@@ -190,3 +190,38 @@ funcECMA6()
 ### *Multiple return statements wont work, as only the first return stmt is considered
 
 ### *Even if we return multiple values using the same return stmt, only the latest value is returned
+
+### Function types
+
+    1.Named fn -> A function declared with an identifier
+
+    2.First class func -> A function stored as a value to a variable
+                      -> should only call with variable name, not the function
+    
+    3.Functional Expression -> the whole expression where the 1st class function is stored in a variable
+
+    4.Anonymous func -> a functional expression which doesnt have the function name
+
+### Eg
+
+```js
+    //First class fn in functional exression
+    let fn = function op(x,y){ 
+    return x+y, x-y, x*y, x/y;
+    }
+    //Only the function oart, not the variable 'fn'
+    
+    // On the whole, its called as a functional expression
+    console.log(fn)
+```
+
+### *If we remove the function name from the first class function, it becomes an anonymous function
+
+### Eg
+
+```js
+    // Anonymous function
+    const opera = function (x,y){
+        return x+y
+    }
+```
