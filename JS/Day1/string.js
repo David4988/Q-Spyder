@@ -23,4 +23,27 @@ let s = "     Yo, Genki ni shiteiru?      "
 
     console.log((s.trim()).length);
     console.log();
+
+//? 4. .substring()
+
+    console.log(s.substring(5,10))
+
+//? 5. concat()
+
+    let s2 = "How"
+    let s3 ="are"
+    let s4 = "you"
+
+    // console.log(s2.split(" ").concat(" ",s3," ",s4, ))
     
+//? 6. .split()    
+
+    console.log(s.trim().split(" "))
+
+//? 7. slice()
+
+    console.log(s.slice(5))
+
+//? 8. replace()
+    let str = "Good Morning mam, I'll reply you shortly, Kind regards"
+    console.log(str.replace("shortly","shorty").replace("regards","retards").replace("Morning","Mourning"))
