@@ -405,5 +405,8 @@ console.log(s.replace("shortly","shorty"),("regards","retards"))
     -> .shift() [remove an element from the beginning of the array]
     -> .reverse() [reverses the array]
     -> .slice() [extract a part of the array]
-    -> includes(checks if an element is present)
-    ->Array.isArray(checks if it is an array) 
+    -> .includes()[checks if an element is present]
+    ->Array.isArray[checks if it is an array]
+    -> .join() [joins the array elements into a string]
+    -> .splice() [add or remove elements from the array] .
+    -> .splice(start, delete count, extra elements to be added)
