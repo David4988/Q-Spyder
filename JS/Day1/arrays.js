@@ -59,3 +59,28 @@ console.log(a.slice(2,10))
 console.log(a.reverse())
 
 console.log((Array.isArray(a))? "Array":"Not an array")
+
+//?.join()
+
+stringArray = ["I", "am", "a", "string", "array"]
+
+console.log(stringArray.join(" "))
+
+//? .indexof()
+
+console.log(stringArray.indexOf("a"))
+
+//? .concat()
+
+let b = [1,2,3]
+let c = [4,5,6]
+let d = ["a","b","c"]
+
+console.log(b.concat(c,d))
+
+//? .splice()
+
+let e = [1,2,3,4,5,6,7,8,9,10]
+
+console.log(e.splice(2,5,"New value")) //! splice(start, delete count, extra elements to be added)
+console.log(e);
