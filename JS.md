@@ -181,7 +181,7 @@ funcECMA6()
 
 ### By default, returns undefined
 
-### Rules: 
+### Rules
 
     No restrictions
     
@@ -273,13 +273,13 @@ console.log("Division"+calculate(5,6,div))
 
 ### 2. No need of curly braces if there is a **single statement** and it will automatically return the value(**implicit return**)
 
-### 3. No need of paranthesis if there is a **single parameter**.
+### 3. No need of paranthesis if there is a **single parameter**
 
 ### arrow functions are mainly used in callback functions
 
 ## Strings
 
-### Collection of characters enclosed between single quotes, double quotes or backticks.
+### Collection of characters enclosed between single quotes, double quotes or backticks
 
 ### Back ticks uses "String Interpolation"
 
@@ -295,11 +295,115 @@ Eg
 
 ## String Properties
     
-    -> .length [do not use paranthesis with it]
+    1. .length [do not use paranthesis with it]
     eg. 
 
-```js
-    let s = "Yo, Genki ni shiteiru?"
-    console.log(s.length);
+```javascript
+
+let s = "Yo, Genki ni shiteiru?"
+console.log(s.length);
 
 ```
+
+    2. .toUpperCase() & .toLowerCase()
+    eg.
+
+```javascript
+
+let s = "Yo, Genki ni shiteiru?"
+console.log(s.toUpperCase())
+```
+
+    3. .substring() -> returns a substring of a string
+
+```javascript
+
+let s = "Yo, Genki ni shiteiru?"
+console.log(s.substring(0,5))
+
+```
+
+    4. .includes() -> checks if a string is present in another string
+
+```javascript
+
+let s = "Yo, Genki ni shiteiru?"
+console.log(s.includes("Genki"))
+
+```
+
+    5. charAt() -> returns the character at a particular index
+
+```js
+
+console.log(s.charAt(5))
+
+```
+
+    6. concat() -> joins multiple strings
+
+```js
+
+console.log(s.concat("Hello"))
+
+```
+
+    7. indexOf() -> returns the index of a character in a string
+
+```js
+
+console.log(s.indexOf("Genki"))
+
+```
+
+    8.split() -> splits a string into an array
+
+```js
+
+console.log(s.split(" "))
+
+```
+
+    9.slice() -> returns a substring of a string
+
+```js
+
+console.log(s.slice(0,5))
+
+```
+
+    10.replace() -> replaces a substring in a string
+
+```js
+
+let s = "Good Morning, I'll reply you shortly, Kind regards"
+
+console.log(s.replace("shortly","shorty"),("regards","retards"))
+
+```
+
+## Arrays
+
+### -> collection of data stored in **contiguous memory** locations
+
+### -> **separated by commas, enclosed within square brackets**
+
+### -> can be **heterogenous** in nature
+
+### -> **size of elements** in an array is not fixed and **can be changed**
+
+### -> Arrays are **mutable**
+
+### -> Arrays is like a **Bitch** (Gowtham's eg)
+
+### **Array Operations**
+
+    -> .length [dont use '()']
+    -> .push() [add an element at the end of the array]
+    -> .pop() [remove an element from the end of the array]
+    -> .unshift() [add an element at the beginning of the array]
+    -> .shift() [remove an element from the beginning of the array]
+    -> .reverse() [reverses the array]
+    -> .slice() [extract a part of the array]
+    -> includes(checks if an element is present)
+    ->Array.isArray(checks if it is an array) 
