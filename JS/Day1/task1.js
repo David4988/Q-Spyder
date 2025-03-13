@@ -73,33 +73,46 @@ uniqueId(mailId)
 
 // prodDesc = "Breakfast and lunch are free"
 
-// const prodDescConv = (desc) =>{
-//     return (desc.includes("free")?(desc.replaceAll("free", "complementary")):(desc))
-// }
+//TODO
+ //TODO * This function takes a product description string as input and returns a new string
+ //TODO where all occurrences of the word "free" are replaced with "complementary" if "free" is present.
+ //TODO Otherwise, it returns the original string.
+ // ** @param {string} desc - The product description string to be converted.
+ // ** @returns {string} The converted product description string.
+ //TODO 
+const prodDescConv = (desc) =>{
+    return (desc.includes("free")?(desc.replaceAll("free", "complementary")):(desc))
+}
 // console.log(prodDescConv(prodDesc))
 
-//? Task 6: You are building a search feature for a website. Clean the input of extra whitespaces, convert it into lower string, replace all hyphens with space and also, check if the word sale is present in it.
+// //? Task 6: You are building a search feature for a website. Clean the input of extra whitespaces, convert it into lower string, replace all hyphens with space and also, check if the word sale is present in it.
 
-let input = "   asd f ghjkl    "
+let input = "asdf asdfghnjm"
 
+/**
+ * This function takes a string as input, trims it of any extra
+ * whitespaces, converts it into lower string, replaces all hyphens
+ * with space and also, checks if the word sale is present in it.
+ * @param {string} input - The string to be cleaned and searched.
+ */
 const searchCleanUp = (input) => {
     console.log(`The given input after cleaned: ${input.trim().toLowerCase().replaceAll("-"," ")}`);
     (input.includes("sale"))?(console.log(`The word sale is present`)):console.log("The word sale is not present")
 }
 searchCleanUp(input)
 
-//? Task 7:
+// //? Task 7:
 
-let friendList = ["asdfghj"]
+// let friendList = ["asdfghj"]
 
-const removeAdd = (list, start, del, ...newAdd)=>{
-    list.splice(start, del, ...newAdd)
-    console.log(list)
-}
+// const removeAdd = (list, start, del, ...newAdd)=>{
+//     list.splice(start, del, ...newAdd)
+//     console.log(list)
+// }
 
-const manageFriends = (list, action, start, end, friends)=>{
+// const manageFriends = (list, action, start, end, friends)=>{
     
-    action(list, start, end, friends)
+//     action(list, start, end, friends)
     
-}
-manageFriends(friendList, removeAdd, 0, 1, ["Rajiv", "Magesh", "Kanishk"])
+// }
+// manageFriends(friendList, removeAdd, 0, 1, ["Rajiv", "Magesh", "Kanishk"])
