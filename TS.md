@@ -2,13 +2,13 @@
 
 ## Intro
 
-#### What is TypeScript?
+### What is TypeScript?
 
 - TypeScript is a superset of JavaScript that adds static types.
 - It was developed by Microsoft and first released in 2012.
 - TypeScript compiles to plain JavaScript, making it compatible with any browser or JavaScript engine.
 
-#### Why Use TypeScript?
+### Why Use TypeScript?
 
 - **Static Typing**: Helps catch errors at compile time rather than runtime.
 - **Enhanced IDE Support**: Provides better autocompletion, navigation, and refactoring.
@@ -27,7 +27,7 @@ let name:number = 30
 - **String**: Represents textual data.
 
 ```typescript
-let name:string = "John Doe"
+let name:string = "Jane Doe"
 ```
 
 - **Boolean**: Represents boolean values.

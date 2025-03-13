@@ -283,6 +283,8 @@ console.log("Division"+calculate(5,6,div))
 
 ### Back ticks uses "String Interpolation"
 
+### the created string is called a template literal
+
 Eg
 
 ```js
@@ -408,5 +410,182 @@ console.log(s.replace("shortly","shorty"),("regards","retards"))
     -> .includes()[checks if an element is present]
     ->Array.isArray[checks if it is an array]
     -> .join() [joins the array elements into a string]
-    -> .splice() [add or remove elements from the array] .
+    -> .splice() [add or remove (modify) elements from the array] .
     -> .splice(start, delete count, extra elements to be added)
+
+## Object
+
+### * A programatical representation of a real world entity
+
+### * Key-value pair, separated by colon
+
+### * Properties -> info about object
+
+### Eg.
+
+```js
+
+const obj =  {
+    Name: "Davidson",
+    Age: 20,
+    Hobies: ["Anime", "Genshin", "Zenless Zone Zero"],
+}
+
+console.log(obj)
+
+```
+
+### * Use dot notation (.) to access the properties of an object
+
+```js   
+
+const obj =  {
+    Name: "Davidson",
+    Age: 20,
+    Hobies: ["Anime", "Genshin", "Zenless Zone Zero"],
+}
+
+console.log(obj.Name)
+
+```
+
+### * Dot notation only works when we **know the key** we ae accessing
+
+### * But, by using Bracket notation [] we can **access the property directly**
+
+### * So, always go for bracket notation for **dynamic access of the object**
+
+### * When you want to create keys which **doesnt follow usual naming convention**, enclose them in **double quotes** (can only be accessed using bracket notation)
+
+```javascript
+
+const obj =  {
+    "Name-first": "Davidson",
+    "1Age": 20,
+    "Hobies Games": ["Anime", "Genshin", "Zenless Zone Zero"],
+}
+```
+
+### Updating
+
+```javascript
+
+obj.Name = "Baka"
+
+```
+
+### Creating a key
+
+#### Just specify the new key to the object
+
+```javascript
+
+obj.DOB= "01-01-2000"
+
+```
+
+### Getting all keys present in an object
+
+```javascript
+
+console.log(Object.keys(obj))
+
+```
+
+### Getting all values present in an object
+
+```javascript
+
+console.log(Object.values(obj))
+
+```
+
+### Getting all key-value pairs present in an object
+
+```javascript
+
+console.log(Object.entries(obj))
+
+```
+
+### JSON (JavaScript Object Notation)
+
+#### * A data interchange format
+
+#### * Used for storing and transferring data between a server and a client
+
+#### * Light-weight and easy to read
+
+#### * JSON stores everything in a sting format, while JS stores everything in its respective format
+
+#### * it does not allow function and undefined datatypes
+
+#### * the keys must be a string
+
+    JSON.stringify() -> converts a JavaScript object or value into a JSON string
+
+    JSON.parse() -> converts a JSON string into a JavaScript object
+
+## Advanced Loop
+
+### Filter
+
+#### -> filter method is used to **filter out the elements of an array based on a condition**
+
+#### -> it returns a new array containing the elements that pass the test implemented by the provided function
+
+#### filter(func) [So, filter is a Higher Order Function, func is the callback function]
+
+```javascript
+    
+let a = [1,2,3,4,5,6,7]
+
+let eve = a.filter((val)=> {
+    return val%2==0
+})
+
+console.log(eve)
+
+```
+
+### Map
+
+#### -> map method is used to **transform each element of an array into a new value**
+
+#### -> it returns a new array
+
+#### map(func) [So, map is a Higher Order Function, func is the callback function]
+
+```javascript
+
+a = [1,2,3,4,5,6]
+sq = a.map((n)=> {
+    return n*n
+})
+console.log(sq)
+
+```
+
+### ForEach
+
+#### -> forEach method is used to **execute a provided function once for each element in an array**
+
+#### -> used for iteration
+
+#### -> it does not return any array/value
+
+#### forEach(func) [So, forEach is a Higher Order Function, func is the callback function]
+
+### Reduce
+
+## Destructuring
+
+### * used to extract data from arrays or objects into individual variables
+
+```javascript
+
+let arr = [1,2,3,4,5,6,7]
+
+let [a,b,c,d,e,f,g] = arr
+
+console.log(a,b,c,d,e,f,g)
