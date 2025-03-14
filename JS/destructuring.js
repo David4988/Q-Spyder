@@ -40,21 +40,23 @@
 
 // console.log(a,b,c,d,e,No,City,g)
 
-const student = {
-    Name: "John Doe",
-    Age: 20,
-    Addr:{
-        City:"New York",
-        Zip:"10001",
-        Coord:{
-            Lat:40.7128,
-            Lon:-74.0060,
-        }
-    },
-    Courses:['Math', "Science", "History"]
-}
-let {Addr:{Coord:{Lat:lat}},Courses:[,sci,]} = student;
-console.log(lat,sci)
+// const student = {
+//     Name: "John Doe",
+//     Age: 20,
+//     Addr:{
+//         City:"New York",
+//         Zip:"10001",
+//         Coord:{
+//             Lat:40.7128,
+//             Lon:-74.0060,
+//         }
+//     },
+//     Courses:['Math', "Science", "History"]
+// }
+// let {Addr:{Coord:{Lat:lat}},Courses:[,sci,]} = student;
+// console.log(lat,sci)
+
+//?
 const company = {
     name:"Tech Corp",
     department:[{
