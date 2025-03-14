@@ -40,7 +40,7 @@ let is active = true
 
 - **Any**: Represents any datatype and disables type checking
 
-- **Void**: Represents the absence of a type, commonly used for functions that do not return a value.
+- **Void**: Represents the absence of any value, commonly used for functions that do not return a value.
 
 ```typescript
     function logMessage(message: string): void {
@@ -103,3 +103,34 @@ const subt = (x:number,y:number) =>{
 
 // console.log(prod(5,6)) //! Type 'string' is not assignable to type 'number'.
 ```
+
+## Arrays
+
+- Arrays can be defined as a type of object that can store multiple values of the **same datatype**
+
+### Two types of Arrays
+
+1. Square bracket notation
+
+```ts
+
+let arr1 = [1,2,3]
+let arr2 = [1,'a',true]
+
+```
+
+2. generic Array`<type>` notation
+
+```ts
+
+let arr1: Array<number> = [1,2,3]
+let arr2: Array<string> = [1,'a',true]
+
+```
+
+## Objects
+
+- represents a **collection of properties,** each with a **key** and an associated **value**.
+
+- The properties of an object can have **specific types** and an obj. itself can be annotated with a type, often defined using an **interface** or **type alias**.
+
