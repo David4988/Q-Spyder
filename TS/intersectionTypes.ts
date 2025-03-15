@@ -1,14 +1,18 @@
-type Params = {
-    Name:string;
-    Age:number;
-    Hobbies: string[];
-    FavGames: string[];
-    KnownLang: string[];
+type Simple = {
+    Name:string | null;
+    Age:number | null;
+    Hobbies: string[] | null;
+    FavGames: string[] | null;
+    KnownLang: string[] | null;
+}
+type Complex = {
     Addr: object;
     eat: () => string;
     play: () => string;
     sleep: () => string;
 }
+
+type Params = Simple & Complex; // Combined Simple and Complex types into a single Params type
 
 const person:Params = {
     Name:`Davidson`,
@@ -26,9 +30,3 @@ const person:Params = {
     play:() => `Playing Z`,
     sleep:()=> `He is sleeping`,
 }
-
-let JSONFormat = JSON.stringify(person);
-console.log(JSONFormat);
-
-let JsFormat = JSON.parse(JSONFormat)
-console.log(JsFormat);
