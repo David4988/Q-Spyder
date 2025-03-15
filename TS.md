@@ -134,3 +134,56 @@ let arr2: Array<string> = [1,'a',true]
 
 - The properties of an object can have **specific types** and an obj. itself can be annotated with a type, often defined using an **interface** or **type alias**.
 
+- **Type aliases** are often used to **define custom types** that can be used throughout the codebase.
+
+```typescript
+
+type Params = {
+    Name:string;
+    Age:number;
+    Hobbies: string[];
+    FavGames: string[];
+    KnownLang: string[];
+    Addr: object;
+    eat: () => string;
+    play: () => string;
+    sleep: () => string;
+}
+
+const person:Params = {
+    Name:`Davidson`,
+    Age:20,
+    Hobbies: [`Anime`, `Genshin`, `Zenless Zone Zero`],
+    FavGames: [`Genshin`, `Zenless Zone Zero`, `Honkai Star Rail`, `Honkai Impact 3`,`Sekiro`, `Ghost of Tsushima`],
+    KnownLang:[`Tamil`, `English`, `Japanese`],
+    Addr: {
+                No: `17`,
+                Street: `Vasantham Apts`,
+                City: `Chennai`,
+                State: `TamilNadu`,
+            },
+    eat: () => `He is sleeping`,
+    play:() => `Playing Z`,
+    sleep:()=> `He is sleeping`,
+}
+
+```
+
+- We can specify that a property is *optional* by adding a question mark (?) after the property name.
+
+## Intersection types
+
+### * Combine multiple types into a single type by using the *intersection operator **'&'***
+
+## Union
+
+### * Combine multiple types into a single type by using the *union operator *'|'
+
+### Used to declare a type that can have one of several possible types
+
+```typescript
+
+type Color = 'number' | 'string' | 'null';
+const numbers = (string | number)[] = [1,2,3,4,5,6,7]
+
+```

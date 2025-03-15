@@ -678,7 +678,7 @@ console.log("ASDFGH")
 
 ### Asynchronous
 
-#### * An asynchronous function is a function that executes in a different order than it is written in the code
+#### * An asynchronous function is a function that executes in a ***different order*** than it is written in the code
 
 #### * uses the concept of multithreading
 
@@ -703,6 +703,7 @@ console.log("ASDFGH")
 2. setInterval()
     - runs **multiple times**
     - returns an **id**
+
     ```javascript
 
         console.log("start")
@@ -711,6 +712,7 @@ console.log("ASDFGH")
         },3000)
         console.log("end")
     ```
+
 3. clearInterval()
     - stops the interval with the given id
 
