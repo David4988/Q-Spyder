@@ -15,7 +15,7 @@
 const getData = async () => {
     try{
         let response = await fetch("https://api.escuelajs.co/api/v1/products")
-        data = await response.json()
+        data = await response.json() // .json() returns a promise
     }catch(e){ // Even when faced with an error, the program flow is not stop
         console.log(e);
         
