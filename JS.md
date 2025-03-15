@@ -296,7 +296,7 @@ Eg
 ```
 
 ## String Properties
-    
+
     1. .length [do not use paranthesis with it]
     eg. 
 
@@ -421,7 +421,7 @@ console.log(s.replace("shortly","shorty"),("regards","retards"))
 
 ### * Properties -> info about object
 
-### Eg.
+### Eg
 
 ```js
 
@@ -437,7 +437,7 @@ console.log(obj)
 
 ### * Use dot notation (.) to access the properties of an object
 
-```js   
+```js
 
 const obj =  {
     Name: "Davidson",
@@ -528,6 +528,10 @@ console.log(Object.entries(obj))
 
 ## Advanced Loop
 
+### Note
+
+- the callback functions of these looping statements, have the same parameters (value)
+
 ### Filter
 
 #### -> filter method is used to **filter out the elements of an array based on a condition**
@@ -550,7 +554,7 @@ console.log(eve)
 
 ### Map
 
-#### -> map method is used to **transform each element of an array into a new value**
+#### -> map method is used to **update each element of an array into a new value**
 
 #### -> it returns a new array
 
@@ -589,3 +593,163 @@ let arr = [1,2,3,4,5,6,7]
 let [a,b,c,d,e,f,g] = arr
 
 console.log(a,b,c,d,e,f,g)
+```
+
+## Spread
+
+### * used to expand an array or an object into individual elements
+
+```js
+
+let arr1 = [1,2,3]
+let arr2 = [4,5,6]
+let arr3 = [7,8,9]
+
+let arr = [...arr1, ...arr2, ...arr3]
+
+console.log(arr)
+
+let obj1 = {
+    Name: "John",
+    Age:30,
+}
+let obj2 = {
+    Name: "John",
+    City: "Chennai"
+}
+console.log({...obj1, ...obj2})
+
+```
+
+## Modules
+
+- Breaking down of a **larger code** into **multiple small chuncks**
+- Using modules, we can **organize our code into individual files** and **import them into the main file**
+- Using modules, we can **re-use the code** in different parts of our application
+
+### Types of exports
+
+#### 1. Default export
+
+- We can only have one default export per file
+- it can have any name
+
+```javascript
+
+import add from 'function.js'
+
+```
+
+#### 2. Named export
+
+- We can have multiple named exports per file
+- it must have the name same as the importing file
+
+```javascript
+
+import * as fn from 'function.js'
+let {add,sub,mult, div} = fn
+
+```
+
+## Synchronous and Asynchronous Programming
+
+### Synchronous
+
+#### * A synchronous function is a function that executes in the same order as it is written in the code
+
+#### * It is executed line by line
+
+#### * So, if there is a single large task in the code, it will take a long time to execute
+
+### if we get a code like the one in the following example, it will take a long time to execute
+
+### Ex
+
+```js
+
+console.log("asdfghjk");
+while(true){
+
+}
+console.log("ASDFGH")
+
+```
+
+### Asynchronous
+
+#### * An asynchronous function is a function that executes in a different order than it is written in the code
+
+#### * uses the concept of multithreading
+
+#### * If we get a large process between small tasks, we shift the process to a slave thread
+
+#### * So, if there is a single large task in the code, it will not take a long time to execute
+
+#### **Methods**
+
+1. setTimeout()
+
+    - needs callback function as an argument
+    - executes only **1 time**
+
+    ```javascript
+        console.log("start")
+        setTimeout((greet)=> console.log("Processing"), 2000) //? setTimeout(handler,timeOut, n[] arguments)
+        console.log("end")
+        console.log(greet)
+    ```
+
+2. setInterval()
+    - runs **multiple times**
+    - returns an **id**
+    ```javascript
+
+        console.log("start")
+        setInterval(()=>{
+        console.log("Processing");
+        },3000)
+        console.log("end")
+    ```
+3. clearInterval()
+    - stops the interval with the given id
+
+    ```javascript
+    setTimeout(()=>clearInterval(id),8000)
+    ```
+
+## Promises
+
+![Promise](./Promise.png "Promise")
+
+### **Eventual completion or failure of an async operation*
+
+### * used to handle asynchronous operations
+
+### * has 2 states: **fulfilled** and **rejected**
+
+### Fetch using API -> gives a promise -> -> gets fullfilled or rejected based on conditions like auth
+
+## Async/Await
+
+### * used to make synchronous code asynchronous
+
+### * await -> waits for the promise to reach the settled state
+
+### * async -> makes a function asynchronous
+
+```javascript
+
+async function getData(){ // Handled by your Worker thread
+    console.log("Before API call");
+    
+    let response = await fetch("https://fakestoreapi.com/products") // Fetch returns a promise, await waits for the promise to settle(pending -> settled state)
+    console.log("After API call");
+    
+    p = await response.json()
+    console.log(p)
+}
+getData();
+console.log("hello") 
+
+```
