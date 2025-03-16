@@ -30,3 +30,10 @@ const person:Params = {
     play:() => `Playing Z`,
     sleep:()=> `He is sleeping`,
 }
+
+//? Literal Types
+
+let color: "red" | "green" | "blue";
+color = "red" //valid
+
+// color = "yellow" //!Type '"yellow"' is not assignable to type '"red" | "green" | "blue"'
