@@ -408,7 +408,7 @@ console.log(s.replace("shortly","shorty"),("regards","retards"))
     -> .reverse() [reverses the array]
     -> .slice() [extract a part of the array]
     -> .includes()[checks if an element is present]
-    ->Array.isArray[checks if it is an array]
+    -> Array.isArray[checks if it is an array]
     -> .join() [joins the array elements into a string]
     -> .splice() [add or remove (modify) elements from the array] .
     -> .splice(start, delete count, extra elements to be added)
@@ -755,3 +755,94 @@ getData();
 console.log("hello") 
 
 ```
+
+## DOM (Document Object Model)
+
+- represents the HTML document
+
+- provides a way to access and manipulate the elements of the HTML document
+
+### **DOM Selectors**
+
+1. **getElementById()**
+
+```javascript
+
+console.getElementById("id")
+
+```
+
+2. **getElementsByClassName()**
+
+```javascript
+
+console.getElementsByClassName("container")
+
+```
+
+3. **getElementsByTagName()**
+
+```javascript   
+
+console.getElementsByTagName("h1")
+
+```
+
+4. **getElementsByName()**
+
+```javascript
+
+console.getElementsByName("name")
+
+```
+
+5. **querySelector()**
+
+```javascript
+
+console.querySelector(".container")
+
+```
+
+6. **querySelectorAll()**
+
+```javascript
+
+console.querySelectorAll(".container")
+
+```
+
+## DOM manipulation
+
+- .createElement -> creates a new element
+
+- .appendchild -> adds a child element to the last of the parent element
+
+- .removechild -> removes a child element from the parent element
+
+- .setAttribute -> sets an attribute of the element
+
+### 
+
+### * CSS added using JS is inline
+
+## Event Handling
+
+### * **action performed** on the webpage either by the user or by the browser
+
+### * using it, we can add multiple events to the same element
+
+### ``element.addEventListenter("event",function)``
+
+### **Mouse**
+
+#### click -> onclick
+
+#### dbclick -> ondblclick
+
+#### mouseenter
+
+#### mouseleave
+
+#### mousemove
+

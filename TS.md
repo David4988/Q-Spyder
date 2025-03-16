@@ -187,3 +187,124 @@ type Color = 'number' | 'string' | 'null';
 const numbers = (string | number)[] = [1,2,3,4,5,6,7]
 
 ```
+
+## Literal Types
+
+### * A type that can only be a **specific literal** value
+
+```typescript
+
+let color: "red" | "green" | "blue";
+
+color = "red" ; // valid
+color = "yellow" //invalid
+
+```
+
+## Tuples
+
+### * an array with **fixed number** of elements, where each element can have a different type
+
+``` typescript
+
+const games: [string, number, string] = ["Jason", 20, "Sophomere"]
+console.log(games);
+
+```
+
+## Enums
+
+### * way to define a set of **named constants**
+
+```typescript
+
+enum personEnum{
+    Name = "Davidson",
+    Age = 20,
+    Hobbies = "Guitar, Anime, Games"
+}
+
+console.log(`Name: ${personEnum.Name}`)
+
+console.log(personEnum)
+
+```
+
+## Interface
+
+### * a way to define a **contract for the shape of the object**
+
+### * specifies the **properties and types** that an *object must have*
+
+### * they are not only used to define the structure of an object, but also to describe the shape of functions and classes
+
+``` typescript
+
+interface MovieDetails{
+    readonly name: string,
+    ratings: number,
+    printMovieInfo(name: string,price:number,ratings:number): string | number;
+}
+
+interface MovieGenre extends MovieDetails{
+    genre:string
+}
+const movie1:MovieGenre = {
+    name:"Star Wars",
+    genre: "Action",
+    ratings:8.9,
+    printMovieInfo(
+        name: string,
+        price:number,
+        ratings:number
+    ): string | number {
+        return `Movie Name: ${name}, Price: ${price}, Rating: ${ratings} `
+    },
+};
+
+```
+
+### **Declaration Merging**
+
+#### * The ability to extend or augment an existing declaration
+
+#### * allows you to add new properties or methods to an existing interface without modifying the original declaration
+
+``` typescript
+
+interface MovieDetails{
+    readonly name: string,
+    ratings: number,
+    printMovieInfo(name: string,price:number,ratings:number): string | number;
+}
+
+interface MovieDetails{
+    genre:string
+}
+
+const movie1:MovieDetails = {
+    name:"Star Wars",
+    genre: "Action",
+    ratings:8.9,
+    printMovieInfo(
+        name: string,
+        price:number,
+        ratings:number
+    ): string | number {
+        return `Movie Name: ${name}, Price: ${price}, Rating: ${ratings} `
+    },
+};
+
+```
+
+## Type Narrowing
+
+### * process of refining a variable's type within a conditional block of code
+
+### mechanisms provided by type narrowing
+
+- Type guards -> uses typeof operator to filter the type of a variable
+
+- The instanceof operator -> use it to check whether an obj. is an instance of a particular class or a constructor
+
+- Intersection types
