@@ -63,3 +63,35 @@
 ### * Changes are made on the Virtual DOM first, then using Diffing algorithm the changes are identified and applied on the Real DOM
 
 ### diffing -> comparing real dom with the virtual DOM
+
+## Creating a react App
+
+### Go to src folder and create a folder named **main.jsx**
+
+### perform these steps
+
+```jsx
+
+import React from "react"
+import ReactDOM from "react-dom/client"
+
+ReactDOM.createRoot(document.getElementById("root")).render(<h1>Hello</h1>) //Creating the root element by selecting it from the index.html using getElementById() and rendering the h1 tag
+```
+
+### **Creating a React Element using createElement()**
+
+```jsx
+let obj = React.createElement("h1", {id:"first"}, "Created using React createElement")
+ReactDOM.createRoot(document.getElementById("root")).render(obj) //Creating the root element by selecting it using getElementById()
+
+```
+
+### * Since the above method is complecated, we use .jsx
+
+### * JSX expressions must have one parent element
+
+### * to provide class, use className in JSX, to provide 'for' attribute is 'htmlFor' as 'class' is a keyword in JS
+
+### * inbuilt tags must be in lower case
+
+### * custom tags must me in Pascal case
