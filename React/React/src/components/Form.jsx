@@ -15,7 +15,7 @@ const Form = () => {
                  `TamilNadu`,
     ],
     eat: () => `He is eating`,
-    play:() => `Playing Z`,
+    play:() => `Playing ZZZ`,
     sleep:()=> `He is sleeping`,
     }
   return (
