@@ -86,12 +86,151 @@ ReactDOM.createRoot(document.getElementById("root")).render(obj) //Creating the 
 
 ```
 
+## Rules of JSX
+
 ### * Since the above method is complecated, we use .jsx
+
+### * JSX elements must be closed
 
 ### * JSX expressions must have one parent element
 
 ### * to provide class, use className in JSX, to provide 'for' attribute is 'htmlFor' as 'class' is a keyword in JS
 
-### * inbuilt tags must be in lower case
+### * inbuilt tags must be in lower case, attributes must be in camel case
 
 ### * custom tags must me in Pascal case
+
+### * Use {} for javascript expression
+
+## React Fragment
+
+### ``<React.Fragment>`` is used for enclosing multiple elements as, creting sections and divs unnecessarily, creates extra nodes, which is bad for performance
+
+### An alternate for that is ``<></>`` empty fragment
+
+## * Using JS in JSX
+
+### * We use JS expressions inside a `{}`
+
+### * We can pass number, string and array
+
+### * We can use those JS expressions that can return a value
+
+### * We cant use bool, null and undefined types
+
+### `filter()`, `map()` and `ternary operators` could be used in JSX Expressions
+
+## Components
+
+### * a reusable, independent, js functions that can be used multiple times within an application
+
+### * Components allows us to break down the UI into smaller parts
+
+### * In 2019, React introduced "React Hooks", which made function based components stateful
+
+## Types of Components
+
+1. Function Based Component
+
+2. Class Based Component
+
+## Creating Components
+
+1. Create them in the ``src`` folder - must be a JSX file
+
+2. The first alphabet of the file name must be in caps Eg ``App.jsx``
+
+3. Syntax may be class or function based
+
+4. Then export your component
+
+5. And import it with proper address whenever you want and use custom defined tag (wraped inside angular braces)
+
+### * Component composition -> calling the user defined component using tags Eg `<App/>`
+
+## Props
+
+### * To make our components dynamic, we provide it with properties
+
+### * We pass arguments to components
+
+### * The arguments are passed as a **single object**
+
+### * When **Props**, **except string**, use **curly braces** to enclose it
+
+### * We use unpaired tags to give objects, paired tags to give props to other components as **children**
+
+### Props are **read-only **
+
+### Parent Component:
+
+```jsx  
+
+const Form = () => {
+  let Name = "John"
+  let Age = 20
+  return (
+    <React.Fragment key={1}>
+            <form action="" className=' p-10'>
+            <h1 className='text-3xl font-semibold'>Form</h1>
+                <fieldset className='flex gap-4 py-5'>
+                    <label htmlFor="name" className='text-lg' name={Name}>Enter you Name</label>
+                    <input type="text" className='border rounded-sm' /><br></br>
+                    <label htmlFor="name" className='text-lg'>Enter you Age</label>
+                    <input type="number" className='border rounded-sm'/>
+                </fieldset>
+            </form>
+            <Info name = {"John"} age={20}/>
+        </React.Fragment>
+  )
+}
+
+```
+
+### Child Component:
+
+```jsx
+
+const Info = (props) => {
+    console.log(props)
+    const person = {
+        Name: props.name,
+        Age: props.age,
+        Skills: ["HTML ", "CSS ", "JavaScript"]
+    }
+
+    return (
+        <div className="flex flex-col gap-7 p-10">
+            <h1 className='text-4xl font-semibold'>Info</h1>
+            <h1>Name: {person.Name}</h1>
+            <h1>Age: {person.Age}</h1>
+            <h1>Skills: {person.Skills}</h1>
+        </div>
+    );
+};
+
+```
+
+### Passing props as JSX element
+
+#### Parent Component
+
+```jsx
+
+PropsChildren>{<Info name = {"Usopp"} age={Person.Age} hobbies={Person.Hobbies} favGames={Person.FavGames} knownLang={Person.KnownLang} addr={Person.Addr} eat={Person.eat} play={Person.play} sleep={Person.sleep}/>}</PropsChildren>
+
+```
+
+#### Child Component
+
+```jsx
+
+const PropsChildren = (props) => {
+    console.log(props.children)
+  return (
+    <div>{props.children}</div>
+  )
+}
+
+
+```
