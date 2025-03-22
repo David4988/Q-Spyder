@@ -1,5 +1,4 @@
 
-
 interface Param{
     Name: string,
     Age: number,

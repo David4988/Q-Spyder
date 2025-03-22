@@ -1,5 +1,5 @@
-import React from 'react'
 import Info from './Info'
+import State from '../event/State'
 
 const Main = () => {
     const Person = {
@@ -30,6 +30,7 @@ const Main = () => {
         play={Person.play} 
         sleep={Person.sleep} 
       />
+      <State />
     </div>
   )
 }
