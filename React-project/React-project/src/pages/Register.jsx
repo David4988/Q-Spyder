@@ -10,7 +10,8 @@ import Spinner from "../helpers/Spinner";
 const Register = () => {
     const [togglePassword, setTogglePassword] = useState(false)
     const [toggleConfirmPassword, setToggleConfirmPassword] = useState(false)
-    let navigate = useNavigate()
+    let navigate = useNavigate
+    const [isloading, setIsLoading] = useState(false)
 let [data, setData] = useState({
   userName: "",
   email: "",
@@ -27,6 +28,7 @@ let [data, setData] = useState({
   let handleSubmit = async (e) =>{
     e.preventDefault()
     // console.log(data)
+    setIsLoading(true)
     try{
       if(passwd !== confirmpasswd){
         toast.error("Confirm Password does not match")
@@ -50,6 +52,8 @@ let [data, setData] = useState({
     }catch(error){
       console.log(error)
       toast.error(error.message.slice(22))
+    }finally{
+      setIsLoading(false)
     }
   }
 
@@ -158,7 +162,7 @@ let [data, setData] = useState({
               <div className="flex justify-center p-3">
                 <button
                   type="submit"
-                  className="bg-blue-700 text-white py-2 px-4 rounded-md hover:bg-green-700 w-[100%] text-md font-semibold"
+                  className="bg-blue-700 text-white py-2 px-4 rounded-md hover:bg-blue-900 hover:border-blue950 w-[100%] text-md font-semibold"
                 >
                   Register
                 </button>
@@ -167,7 +171,7 @@ let [data, setData] = useState({
           </form>
         </main>
       </div>
-      < Spinner />
+      {isloading===true && < Spinner />}
     </section>
   );
 };

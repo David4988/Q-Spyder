@@ -10,8 +10,8 @@ const Menu = () => {
             to="/"
             className={(obj) => {
               let { isActive } = obj;
-              return `py-2 px-4 rounded-lg hover:cursor-pointer hover:bg-purple-700 ${
-                isActive && "bg-purple-500"
+              return `py-2 px-4 rounded-lg hover:cursor-pointer hover:bg-purple-700 hover:text-white  ${
+                isActive && "bg-purple-500 text-white"
               }`;
             }}
           >
@@ -23,9 +23,9 @@ const Menu = () => {
             to="/auth/login"
             className={(obj) => {
               let { isActive } = obj;
-              return `py-2 px-4 rounded-lg hover:cursor-pointer hover:bg-purple-700 ${
-                isActive && "bg-purple-500"
-              }`;
+              return `py-2 px-4 rounded-lg hover:cursor-pointer hover:bg-purple-700 hover:text-white ${
+                isActive && "bg-purple-500 text-white"
+              }`
             }}
           >
             Login
@@ -36,12 +36,12 @@ const Menu = () => {
             to="/auth/register"
             className={(obj) => {
               let { isActive } = obj;
-              return `py-2 px-4 rounded-lg hover:cursor-pointer hover:bg-purple-700 ${
-                isActive && "bg-purple-500"
+              return `py-2 px-4 rounded-lg hover:cursor-pointer hover:bg-purple-700 hover:text-white ${
+                isActive && "bg-purple-500 text-white"
               }`;
             }}
           >
-            Register
+            Register 
           </NavLink>
         </li>
       </ul>
