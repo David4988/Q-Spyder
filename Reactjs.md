@@ -64,6 +64,8 @@
 
 ### diffing -> comparing real dom with the virtual DOM
 
+### Grouping the changes and 
+
 ## Creating a react App
 
 ### Go to src folder and create a folder named **main.jsx**
@@ -100,13 +102,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(obj) //Creating the 
 
 ### * custom tags must me in Pascal case
 
-### * Use {} for javascript expression
+### * Use {} for JSX expression
 
 ## React Fragment
 
 ### ``<React.Fragment>`` is used for enclosing multiple elements as, creting sections and divs unnecessarily, creates extra nodes, which is bad for performance
 
 ### An alternate for that is ``<></>`` empty fragment
+
+### 
 
 ## * Using JS in JSX
 
@@ -232,5 +236,116 @@ const PropsChildren = (props) => {
   )
 }
 
+
+```
+
+## Using Keys for each child in a list
+
+### * Keys help React identify which items have changed, are added, or are removed
+
+### * When creating same elements again and again in a list, we use ``key`` attrib. to help React identify which items have changed, are added, or are removed and change only the elements that have changed
+
+## Conditional Rendering
+
+### 1. Ternary Operator
+
+```jsx
+
+<h2>{(age>18)?"": "Not"} Eligible to vote</h2>
+
+```
+
+### 2. Short Circuit 'AND' operator (&&)
+
+```jsx
+
+<h2>{age< 18 && "Not"} Eligible to Vote</h2>
+
+```
+
+## True and False Values in JS
+
+| Falsy values | Truthy values |
+| --- | --- |
+| false | everything else that is not falsy |
+| 0 | true |
+| "" or '' (Empty string) | '0' (0 in a string) |
+| null | ' ' (space in a string) |
+| Nan | empty function |
+
+## Events
+
+### * Doesnt use normal browser events, it uses something called as Synthetic events
+
+### Synthetic Events -> created over browser events which are compatible with all browsers (``Cross Browser Compatibility``)
+
+### * Because, of difference in Engine across browsers, events need to be compatible with all browser engine
+
+### * If u need to pass arguments to a function in events, you will pass the fn directly as an arrow function, as you can give arguments in a named function
+
+```jsx
+
+<button onClick={() => console.log(`You clicked me Pervert 😠`)} className='border rounded-md bg-gray-300 my-2'>Direct function</button><br></br> {/* This will work */}
+
+```
+
+## React Hooks
+
+### ->JS functions used to provide extra functionalities to functions
+
+## UseState Hook
+
+### * Virtual DOM wont keep track of data changes/updation of variable in jsx
+
+### * It *manages change* in data when we give *props* from one component to the other, but not *inside the same component*
+
+### State -> Data stored/managed in component level(storing/ managing data in the same component)
+
+### * The useState hook is a function that lets you add React state to a functional component
+
+```jsx
+
+const [count, setCount] = useState(0) // const [changingVar, callbackFn] = useState(initial)
+
+```
+
+## UseEffect Hook
+
+### * The useEffect hook lets you perform side effects in your components
+
+### * Sideffects like datafetching, directly updating the DOM
+
+### * It is called every time the component is rendered by
+
+Eg 
+
+```jsx
+
+import React, { useEffect, useState } from 'react'
+
+const UseEffectFileFetch = () => {
+  const [data, setData] = useState([])
+  useEffect(()=> {
+    async function getData(){
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+        const dataa = await response.json()
+        console.log(dataa)
+        if(dataa && dataa.length) setData(dataa)
+    }
+    getData()
+  },
+  )
+  
+  return (
+    <div>
+        <p>Hello</p>
+        <ul>
+            {data.map((todo)=>( <li key={todo.key}>{todo.title}</li>))}
+        </ul>
+    </div>
+  )
+}
+
+export default UseEffectFileFetch
 
 ```
