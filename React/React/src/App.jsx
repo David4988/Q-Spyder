@@ -7,6 +7,7 @@ import Event from './event/event'
 import States from './event/States'
 import Login from './components/login'
 import Register from './components/Register'
+import routes from './routes/Routes'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         {/* <States /> */}
         {/* <ListKeys /> */}
       {/* <Footer/> */}
+      <RouterProvider router = {routes} />
     </React.Fragment>
   )
 }
