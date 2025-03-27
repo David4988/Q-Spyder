@@ -1,7 +1,9 @@
 import React from 'react'
 import Menu from '../Menu'
 import Logo from '../Logo'
+import { AuthContextAPI } from '../../context/AuthContext'
 const NavbarContainer = () => {
+  
   return (
     <>
     <header className='h-[70px] w-[100%] bg-slate-700 shadow-2xl'>
