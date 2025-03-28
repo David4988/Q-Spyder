@@ -1,8 +1,13 @@
 import React from 'react'
-
+import UserSidebar from "./UserSidebar"
+import { Outlet } from 'react-router-dom'
 const UserLayout = () => {
   return (
-    <div>UserLayout</div>
+    <div className='flex bg-slate-900 h-screen w-full'>
+      <UserSidebar />
+      <Outlet />
+    </div>
+    
   )
 }
 

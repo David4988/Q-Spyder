@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContextAPI } from "../context/AuthContext";
-import LoginRegister from "./navbar/LoginRegister";
-import Logout from "./navbar/Logout";
+import LoginRegister from "../components/navbar/LoginRegister";
+import Logout from "../components/navbar/Logout";
+import ProfilePic from "../components/profilePic";
 
 const Menu = () => {
   let {authUser} = useContext(AuthContextAPI)
@@ -22,8 +23,14 @@ const Menu = () => {
             Home
           </NavLink>
         </li>
+        {/* <li><NavLink>{authUser.photoUrl}</NavLink></li> */}
         {/* //! Use Conditional Rendering and display Login/ Register only when authUser info is NULL */}
-        {(authUser)? <Logout /> :<LoginRegister />}
+        {(authUser)?
+         <>
+          <Logout />
+          <ProfilePic />
+         </>
+          :<LoginRegister />}
         
       </ul>
     </aside>

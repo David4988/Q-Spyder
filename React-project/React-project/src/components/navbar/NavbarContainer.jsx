@@ -1,5 +1,5 @@
 import React from 'react'
-import Menu from '../Menu'
+import Menu from '../../pages/Menu'
 import Logo from '../Logo'
 import { AuthContextAPI } from '../../context/AuthContext'
 const NavbarContainer = () => {

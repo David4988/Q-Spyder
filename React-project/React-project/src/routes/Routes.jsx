@@ -30,7 +30,7 @@ const routes=createBrowserRouter([
                 path:"auth/forget-password",
                 element: <ForgetPassword />
             },{
-                path:"auth/user-profile",
+                path:"user-profile",
                 element: <UserLayout />,
                 children:[
                     {
