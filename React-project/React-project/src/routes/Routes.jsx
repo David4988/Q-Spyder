@@ -9,6 +9,9 @@ import UpdatePicture from "../user/UpdatePicture"
 import UpdateProfile from "../user/UpdateProfile"
 import UserAccount from "../user/UserAccount"
 import UserLayout from "../user/UserLayout"
+import AdminLayout from "../admin/AdminLayout";
+import AdminDashboard from "../admin/AdminDashboard";
+import AddAlbum from "../admin/AddAlbum";
 const routes=createBrowserRouter([
     {
         path: "/",
@@ -29,6 +32,19 @@ const routes=createBrowserRouter([
             {
                 path:"auth/forget-password",
                 element: <ForgetPassword />
+            },{
+                path: "admin",
+                element: <AdminLayout />,
+                children:[
+                    {
+                        index:true,
+                        element: <AdminDashboard />
+                    },
+                    {
+                        path: "add-album",
+                        element: <AddAlbum />
+                    }
+                ]
             },{
                 path:"user-profile",
                 element: <UserLayout />,

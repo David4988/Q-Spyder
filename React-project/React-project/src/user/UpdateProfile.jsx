@@ -28,6 +28,7 @@ const UpdateProfile = () => {
   const handleSubmit = async (e) =>{
     e.preventDefault();
     console.log(data)
+    console.log(authUser)
     let {displayName, email, photoURL, uid} = authUser
 
     let  payload = {
@@ -45,9 +46,10 @@ const UpdateProfile = () => {
     console.log(payload)
     try{
 
-      let user_collection = doc(__DB, "user_profile",uid)
+      let user_collection = doc(__DB, "user_profile", uid)
 
-      await setDoc(user_collection, payload)
+      await setDoc(user_collection,payload)
+
       toast.success("Profile Updated")
     }catch(e){
       console.log(e)

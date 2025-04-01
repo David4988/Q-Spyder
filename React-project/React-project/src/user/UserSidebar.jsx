@@ -10,22 +10,22 @@ const UserSidebar = () => {
         <li className='text-white  font-semibold '>
           <NavLink to="/user-profile" end className={(obj)=>{
              let {isActive}= obj;
-             return `flex gap-2 w-[100%] hover:bg-blue-800 rounded-lg py-2 px-4 ${isActive && `bg-blue-600`}`}} ><span className='relative top-1.5'><MdAccountBox  /></span><span>My Account</span></NavLink>
+             return `flex gap-2 w-[100%] hover:bg-[#7671be] rounded-lg py-2 px-4 ${isActive && `bg-[#877EFF]`}`}} ><span className='relative top-1.5'><MdAccountBox  /></span><span>My Account</span></NavLink>
         </li>
         <li className='text-white font-semibold'>
           <NavLink to="/user-profile/user-picture" end className={(obj)=>{
              let {isActive}= obj;
-             return `flex gap-2 w-[100%] hover:bg-blue-800 rounded-lg py-2 px-4 ${isActive && `bg-blue-600`}`}}><span className='relative top-1.5'><AiFillPicture /></span><span>Update Picture</span></NavLink>
+             return `flex gap-2 w-[100%] hover:bg-[#7671be] rounded-lg py-2 px-4 ${isActive && `bg-[#877EFF]`}`}}><span className='relative top-1.5'><AiFillPicture /></span><span>Update Picture</span></NavLink>
         </li>
         <li className='text-white font-semibold '>
           <NavLink to="/user-profile/user-profile" end className={(obj)=>{
              let {isActive}= obj;
-             return `flex gap-2 w-[100%] hover:bg-blue-800 rounded-lg py-2 px-4 ${isActive && `bg-blue-600`}`}}>Update Profile</NavLink>
+             return `flex gap-2 w-[100%] hover:bg-[#7671be] rounded-lg py-2 px-4 ${isActive && `bg-[#877EFF]`}`}}>Update Profile</NavLink>
         </li>
         <li className='text-white font-semibold '>
           <NavLink to="/user-profile/user-password/" end className={(obj)=>{
              let {isActive}= obj;
-             return `flex gap-2 w-[100%] hover:bg-blue-800 rounded-lg py-2 px-4 ${isActive && `bg-blue-600`}`}}>Update Password</NavLink>
+             return `flex gap-2 w-[100%] hover:bg-[#7671be] rounded-lg py-2 px-4 ${isActive && `bg-[#877EFF]`}`}}>Update Password</NavLink>
         </li>
 
       </ul>
