@@ -10,8 +10,8 @@ import Spinner from "../helpers/Spinner";
 const Register = () => {
     const [togglePassword, setTogglePassword] = useState(false)
     const [toggleConfirmPassword, setToggleConfirmPassword] = useState(false)
-    let navigate = useNavigate
-    const [isloading, setIsLoading] = useState(false)
+    let navigate = useNavigate()
+    const [isLoading, setIsLoading] = useState(false)
 let [data, setData] = useState({
   userName: "",
   email: "",
@@ -60,7 +60,7 @@ let [data, setData] = useState({
 
   return (
     <section className="h-[calc(100vh-70px)] w-[100%] bg-slate-900 flex flex-col items-center">
-      <h1 className="text-center text-3xl font-bold text-red-400 p-3 text-white">
+      <h1 className="text-center text-3xl font-bold p-3 text-white">
         Register
       </h1>
       <br />
@@ -171,7 +171,7 @@ let [data, setData] = useState({
           </form>
         </main>
       </div>
-      {isloading===true && < Spinner />}
+      {isLoading === true && <Spinner />}
     </section>
   );
 };

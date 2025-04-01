@@ -5,7 +5,7 @@ import { __AUTH } from '../backend/firebaseConfig'
 export const AuthContextAPI = createContext()
 
 const AuthProvider = (props) => {
-    let [authUser, setAuthUser] = useState(null)
+    let [authUser, setAuthUser] = useState(null)  
 
     useEffect(() =>{
     onAuthStateChanged(__AUTH,(userInfo)=>{ //! We are using it because, the same account may change some details later
