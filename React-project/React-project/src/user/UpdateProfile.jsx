@@ -3,17 +3,18 @@ import { AuthContextAPI } from '../context/AuthContext'
 import { __DB } from '../backend/firebaseConfig'
 import { doc, setDoc } from 'firebase/firestore'
 import toast from 'react-hot-toast'
+import { UserContextAPI } from '../context/UserContext'
 
 const UpdateProfile = () => {
 
   let {authUser} =useContext(AuthContextAPI)
-
+  const {userProfile} = useContext(UserContextAPI)
   let [data, setData] = useState({
-    phoneNo: "",
-    DOB: "",
-    lang: "",
-    gender: "",
-    addr: ""
+    phoneNo: userProfile?.phone , //! Here, we R setting the previous data here and updating only the required part of data.
+    DOB: userProfile?.dateOfBirth ,
+    lang: userProfile?.languages ,
+    gender: userProfile?.gender ,
+    addr: userProfile?.address ,
   })
   let {phoneNo, DOB, lang, gender, addr} = data
 
@@ -81,8 +82,8 @@ const UpdateProfile = () => {
             <div className='w-1/2 p-2 flex flex-col gap-3'>
               <label htmlFor="gender">Gender : </label>
               <div className='flex gap-5'>
-                <input type="radio" id = "gender" name="gender" value="Male" onChange={handleChange} className=' h-9'/><span className='text-lg'>Male</span>
-                <input type="radio" id = "gender" name="gender" value="Female" onChange={handleChange} className=' h-9'/><span className='text-lg'>Female</span>
+                <input type="radio" id = "gender" name="gender" checked={gender == "Male"} value="Male" onChange={handleChange} className=' h-9'/><span className='text-lg'>Male</span>
+                <input type="radio" id = "gender" name="gender" checked={gender == "Female"} value="Female" onChange={handleChange} className=' h-9'/><span className='text-lg'>Female</span>
               </div>
             </div>
           </article>

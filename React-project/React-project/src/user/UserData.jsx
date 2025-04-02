@@ -4,6 +4,7 @@ import { deleteUser } from 'firebase/auth'
 import { AuthContextAPI } from '../context/AuthContext'
 import toast from 'react-hot-toast'
 import { __AUTH } from '../backend/firebaseConfig'
+import { NavLink } from 'react-router-dom'
 
 
 const UserData = () => {
@@ -11,6 +12,7 @@ const UserData = () => {
     const {authUser} = useContext(AuthContextAPI)
     console.log(userProfile)
     const DeleteUser = async () =>{
+        window.alert("Do you really want to delete the account? ")
         try{
             await deleteUser(authUser)
             toast.success("Account Deleted")
@@ -33,9 +35,9 @@ const UserData = () => {
                     <h3 className='font-semibold text-[#877EFF]'>Date Of Birth : </h3>
                     <p>{userProfile?.dateOfBirth}</p>
                 </div>
-                <div className='flex flex-col gap-1 w-[45%] bg-slate-600 h-16 p-2 rounded'>
+                <div className='flex flex-col gap-1 w-[45%] bg-slate-600 h-16 p-2 rounded overflow-clip'>
                     <h3 className='font-semibold text-[#877EFF]'>Languages : </h3>
-                    <p>{userProfile?.languages}</p>
+                    <p className=''>{userProfile?.languages}</p>
                 </div>
                 <div className='flex flex-col gap-1 w-[45%] bg-slate-600 h-16 p-2 rounded'>
                     <h3 className='font-semibold text-[#877EFF]'>Gender : </h3>
@@ -45,8 +47,8 @@ const UserData = () => {
                     <h3 className='font-semibold text-[#877EFF]'>Address : </h3>
                     <p>{userProfile?.address}</p>
                 </div>
-                <div className='flex justify-end items-center w-full'>
-                    <button onClick={DeleteUser} className='text-red-600 cursor-pointer px-5 py-2 rounded'>Delete Account</button>
+                <div className='flex justify-end items-center w-full '>
+                    <NavLink to="/user-profile/delete-account" className='text-red-600 hover:text-white cursor-pointer px-5 py-2 rounded'>Delete Account</NavLink>
                 </div>
                 
             </div>

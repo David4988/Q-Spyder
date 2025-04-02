@@ -12,6 +12,7 @@ import UserLayout from "../user/UserLayout"
 import AdminLayout from "../admin/AdminLayout";
 import AdminDashboard from "../admin/AdminDashboard";
 import AddAlbum from "../admin/AddAlbum";
+import DeleteAccount from "../user/DeleteAccount";
 const routes=createBrowserRouter([
     {
         path: "/",
@@ -64,6 +65,10 @@ const routes=createBrowserRouter([
                     },{
                         path: "user-password",
                         element: <UpdatePassword />
+                    },
+                    {
+                        path: "delete-account",
+                        element: <DeleteAccount />
                     }
                 ]
             }

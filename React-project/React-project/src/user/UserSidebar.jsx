@@ -11,7 +11,7 @@ const UserSidebar = () => {
           <NavLink to="/user-profile" end className={(obj)=>{
              let {isActive}= obj;
              return `flex gap-2 w-[100%] hover:bg-[#7671be] rounded-lg py-2 px-4 ${isActive && `bg-[#877EFF]`}`}} ><span className='relative top-1.5'><MdAccountBox  /></span><span>My Account</span></NavLink>
-        </li>
+        </li> 
         <li className='text-white font-semibold'>
           <NavLink to="/user-profile/user-picture" end className={(obj)=>{
              let {isActive}= obj;
