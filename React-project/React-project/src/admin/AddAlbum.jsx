@@ -99,7 +99,7 @@ const AddAlbum = () => {
         albumDescription: albumDescription
       }
       console.log(albumData);
-      songs.map( async (value, index) =>{
+      songs.map( async (value) =>{
         const songThumbnailData = new FormData()
         songThumbnailData.append("file", value.songThumbnail)
 
