@@ -5,12 +5,17 @@ import { UserContextAPI } from '../context/UserContext'
 
 const PrivateRoutes = (props) => {
     let { userProfile } = useContext(UserContextAPI)
+    let {authUser} = useContext(AuthContextAPI)
 
-    if(userProfile?.role === "admin"){
+    if(authUser){
+        if(userProfile?.role === "admin"){
         
-        return props.children
+            return props.children
+        }else{
+            return <Navigate to="/"/>
+        }
     }else{
-        return <Navigate to="/"/>
+        return <Navigate to = "/auth/login" />
     }
 }
 
