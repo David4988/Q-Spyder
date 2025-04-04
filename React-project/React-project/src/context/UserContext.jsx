@@ -17,9 +17,10 @@ const UserProvider = (props) => {
             const user_collection = doc(__DB, "user_profile", authUser?.uid); //! We are selection the "user_profile collection" and from it, we r selecting the data using "uid"
             
             console.log(authUser)
+            console.log(userProfile)
 
             onSnapshot(user_collection, (data) =>{
-                console.log(data.data())
+                // console.log(data.data())
                 
                 setUserProfile(data.data())
 

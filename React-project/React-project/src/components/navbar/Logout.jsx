@@ -21,7 +21,7 @@ const Logout = () => {
     <div>
         <NavLink className={(obj) => {
         let { isActive } = obj;
-        return `py-2 px-4 rounded-lg hover:cursor-pointer hover:bg-purple-700 hover:text-white ${
+        return `py-2 px-4 rounded-lg hover:cursor-pointer bg-purple-700 hover:text-white ${
           isActive && " text-white"
         }`
       }} onClick={MakeAuthUserToNull}>Logout</NavLink>

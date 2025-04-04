@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+.scrollbar-hide::-webkit-scrollbar{
+  display:none;
+}
+.scrollbar-hide{
+
+  -ms-overflow-style: none;
+  scrollbar-width: none
+}
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -68,3 +76,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+

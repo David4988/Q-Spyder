@@ -13,6 +13,13 @@ import AdminLayout from "../admin/AdminLayout";
 import AdminDashboard from "../admin/AdminDashboard";
 import AddAlbum from "../admin/AddAlbum";
 import DeleteAccount from "../user/DeleteAccount";
+import Dashboard from "../components/home/Dashboard";
+
+import AlbumDetails from "../components/home/AlbumDetails";
+import PublicRoutes from "./PublicRoutes";
+import NotFound from "../pages/NotFound";
+import PrivateRoutes from "./PrivateRoutes";
+import AdminProtected from "./AdminProtected"
 const routes=createBrowserRouter([
     {
         path: "/",
@@ -20,22 +27,40 @@ const routes=createBrowserRouter([
         children:[
             {
                 path: "/",
-                element:<Home/>
+                element:<PrivateRoutes><Home/></PrivateRoutes>,
+                children: [
+                    {
+                        index:true,
+                        element:<Dashboard />
+                    },
+                    {
+                        path:`album-details`,
+                        element:<AlbumDetails />
+                    }
+                ]
             },
             {
                 path:"auth/login",
-                element:<Login/>
+                element:<PublicRoutes>
+                            <Login/>
+                        </PublicRoutes>
             },
             {
                 path:"auth/register",
-                element:<Register/>
+                element:<PublicRoutes>
+                            <Register />
+                        </PublicRoutes>
             },
             {
                 path:"auth/forget-password",
-                element: <ForgetPassword />
+                element: <PublicRoutes>
+                            <ForgetPassword />
+                        </PublicRoutes>
             },{
                 path: "admin",
-                element: <AdminLayout />,
+                element: <AdminProtected>
+                            <AdminLayout />
+                        </AdminProtected>,
                 children:[
                     {
                         index:true,
@@ -52,25 +77,39 @@ const routes=createBrowserRouter([
                 children:[
                     {
                         index:true,
-                        element: <UserAccount />
+                        element: <PrivateRoutes>
+                                    <UserAccount />
+                                </PrivateRoutes>
 
                     },
                     {
                         path:"user-picture",
-                        element:<UpdatePicture />
+                        element:<PrivateRoutes>
+                                    <UpdatePicture />
+                                </PrivateRoutes>
                     },
                     {
                         path:"user-profile",
-                        element:<UpdateProfile />
+                        element:<PrivateRoutes>
+                                    <UpdateProfile />
+                                </PrivateRoutes>
                     },{
                         path: "user-password",
-                        element: <UpdatePassword />
+                        element:<PrivateRoutes>
+                                    <UpdatePassword />
+                                </PrivateRoutes>
                     },
                     {
                         path: "delete-account",
-                        element: <DeleteAccount />
+                        element: <PrivateRoutes>
+                                    <DeleteAccount />
+                                </PrivateRoutes>
                     }
                 ]
+            },
+            {
+                path:"*",
+                element:<NotFound />
             }
         ]
     }

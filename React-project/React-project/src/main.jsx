@@ -4,11 +4,14 @@ import './index.css'
 import App from './App.jsx'
 import AuthProvider from './context/AuthContext.jsx'
 import UserProvider from './context/UserContext.jsx'
+import AlbumProvider from './context/AlbumContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <AuthProvider>
     <UserProvider>
-      <App />
+      <AlbumProvider>
+        <App />
+      </AlbumProvider>
     </UserProvider>
   </AuthProvider>,
 )

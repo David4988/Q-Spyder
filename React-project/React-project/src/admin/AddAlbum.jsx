@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import toast from 'react-hot-toast';
 import Spinner from '../helpers/Spinner';
+import { doc, setDoc } from 'firebase/firestore'
+import { __DB } from '../backend/firebaseConfig';
 
 const AddAlbum = () => {
   const [album, setAlbum] = useState({
@@ -91,15 +93,18 @@ const AddAlbum = () => {
       const albumPosterURL = posterResult.url;
 
       let albumData = {
-        albumId:albumId,
-        albumTitle:albumTitle,
-        albumPoster:albumPosterURL,
-        albumReleaseDate: albumReleaseDate,
-        albumLanguages: albumLanguages,
-        albumDescription: albumDescription
+        albumId:albumId | "",
+        albumTitle:albumTitle | "",
+        albumPoster:albumPosterURL | "",
+        albumReleaseDate: albumReleaseDate | "",
+        albumLanguages: albumLanguages | "",
+        albumDescription: albumDescription | ""
       }
       console.log(albumData);
-      songs.map( async (value) =>{
+
+      let songData = [] //! Array which contains multiple payload
+
+      await Promise.all(songs.map( async (value) =>{
         const songThumbnailData = new FormData()
         songThumbnailData.append("file", value.songThumbnail)
 
@@ -140,16 +145,34 @@ const AddAlbum = () => {
 
         const songFileDuration = songFileResult.duration
 
-        console.log(songThumbnailURL)
-        console.log(songFileURL)
-        console.log(songFileFormat)
-        console.log(songFileBytes)
-        console.log(songFileId)
-        console.log(songFileDuration);
+        const songPayload = {
+          songId: songFileId,
+          songName: value.songName,
+          songURL: songFileURL,
+          songThumbnail: songThumbnailURL,
+          songFormat: songFileFormat,
+          songBytes: songFileBytes,
+          songDuration: songFileDuration,
+          songSingers: value.songSingers,
+          songMood: value.songMood,
+          songDirector: value.songDirector,
+        }
+        
+        songData.push(songPayload) //! as we have defined 1 obj
+
         
 
-      })
+      }))
+      const payload={...albumData, songs:songData}
+
+        console.log(payload)
+
+        let album_collection = doc(__DB,"album_collection",albumData.albumId)
+        console.log(albumData.albumId)
+        await setDoc(album_collection, payload)
+
       toast.success("Album uploaded")
+      setSongs(initSongStateObj)
 
     }catch(e){
       toast.error(e.message)
@@ -163,7 +186,7 @@ const AddAlbum = () => {
       <article className='min-h-[400px] w-[70%] bg-slate-900 rounded-xl p-8 '>
         <h2 className='text-center text-2xl font-bold'>Add Album</h2>
         <form action="" className='mt-1' onSubmit={handleSubmit}>
-          <h3>Album Details</h3>
+          <h3 className='mt-3 text-xl'>Album Details</h3>
           <article className='mt-3 flex flex-wrap'>
           <div className='w-1/2 p-2 flex flex-col gap-3'>
               <label htmlFor="albumTitle">Album title : </label>

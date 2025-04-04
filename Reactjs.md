@@ -349,3 +349,21 @@ const UseEffectFileFetch = () => {
 export default UseEffectFileFetch
 
 ```
+
+## UseReducer()
+
+### * similar to useState, but it is designed for complex state objects or transitions involving multiple sub-values
+
+### * allows you to handle state in a functional, immutable way
+
+```jsx
+
+const [state,dispatch] = useReducer(reducer, initialState)
+
+```
+
+### `state` -> current state value
+
+### `dispatch` -> fuction you call to send actions to the reducer
+
+### `reducer` -> function which describes **how the state should change** based on actions, takes the *current* and *action* as inputs and returns a *new state*

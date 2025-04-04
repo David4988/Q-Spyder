@@ -16,7 +16,7 @@ const Menu = () => {
   return (
     <aside>
       <ul className="flex gap-3 font-semibold">
-        {userProfile?.role == 'admin' &&
+        {userProfile?.role == 'admin' && (authUser) &&
         <li>
         <NavLink
             to="/admin"
@@ -30,7 +30,16 @@ const Menu = () => {
             Admin
           </NavLink>
           </li>}
-          <li>
+          
+        {/* <li><NavLink>{authUser.photoUrl}</NavLink></li> */}
+        {/* //! Use Conditional Rendering and display Login/ Register only when authUser info is NULL */}
+        {(authUser)?
+         <>
+          <Logout />
+          <ProfilePic />
+         </>
+          :(<>
+              <li>
           <NavLink
             to="/"
             className={(obj) => {
@@ -43,14 +52,8 @@ const Menu = () => {
             Home
           </NavLink>
         </li>
-        {/* <li><NavLink>{authUser.photoUrl}</NavLink></li> */}
-        {/* //! Use Conditional Rendering and display Login/ Register only when authUser info is NULL */}
-        {(authUser)?
-         <>
-          <Logout />
-          <ProfilePic />
-         </>
-          :<LoginRegister />}
+              <LoginRegister />
+            </>)}
         
       </ul>
       {isLoading && <Spinner />}

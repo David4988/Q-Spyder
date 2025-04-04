@@ -4,11 +4,12 @@ import { __DB } from '../backend/firebaseConfig'
 import { doc, setDoc } from 'firebase/firestore'
 import toast from 'react-hot-toast'
 import { UserContextAPI } from '../context/UserContext'
+import Spinner from '../helpers/Spinner'
 
 const UpdateProfile = () => {
 
   let {authUser} =useContext(AuthContextAPI)
-  const {userProfile} = useContext(UserContextAPI)
+  const {userProfile, isLoading} = useContext(UserContextAPI)
   let [data, setData] = useState({
     phoneNo: userProfile?.phone , //! Here, we R setting the previous data here and updating only the required part of data.
     DOB: userProfile?.dateOfBirth ,
@@ -46,7 +47,6 @@ const UpdateProfile = () => {
     }
     console.log(payload)
     try{
-
       let user_collection = doc(__DB, "user_profile", uid)
 
       await setDoc(user_collection,payload)
@@ -97,6 +97,7 @@ const UpdateProfile = () => {
           <button className='bg-blue-600 hover:bg-blue-800  px-4 py-2 rounded'>Submit</button>
         </form>
       </article>
+      {isLoading && <Spinner />}
     </section>
   )
 }

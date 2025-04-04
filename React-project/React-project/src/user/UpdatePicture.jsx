@@ -75,7 +75,7 @@ const UpdatePicture = () => {
               ?
                 <img src={preview} className='h-32 w-32 rounded-full'/>
               : 
-              <div className='text-center'>No image Selected</div>
+              <div className='text-center bg-slate-700'>No image Selected</div>
             }
           </div>
           <label htmlFor="picture" className='block h-[100px] py-2 w-full text-center rounded-lg border border-dashed border-white'>Select a Photo</label>

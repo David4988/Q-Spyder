@@ -1,26 +1,13 @@
 import React, { useContext } from 'react'
 import { UserContextAPI } from '../context/UserContext'
-import { deleteUser } from 'firebase/auth'
-import { AuthContextAPI } from '../context/AuthContext'
-import toast from 'react-hot-toast'
 import { __AUTH } from '../backend/firebaseConfig'
 import { NavLink } from 'react-router-dom'
 
 
 const UserData = () => {
     const {userProfile} = useContext(UserContextAPI)
-    const {authUser} = useContext(AuthContextAPI)
     console.log(userProfile)
-    const DeleteUser = async () =>{
-        window.alert("Do you really want to delete the account? ")
-        try{
-            await deleteUser(authUser)
-            toast.success("Account Deleted")
-        }catch(error){
-            toast.error(error.message)
-        }
-        
-    }
+    
     
   return (
     <div className='text-white'>

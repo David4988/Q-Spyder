@@ -13,7 +13,7 @@ const UserAccount = () => {
         <header className='h-[110px] w-[100%] bg-slate-700 rounded-t-xl flex flex-col justify-center items-center '>
           <img src={authUser?.photoURL} className="h-22 w-22 rounded-full -mt-14" /> {/* //! We are using Optional Chaining(?.) because, we get a null error when we reload the webpage */}
           <h2 className='text-white'>{authUser?.displayName}</h2>
-          <h2 className='text-[#877EFF]'>{authUser?.email}</h2>
+          <h2 className='text-[#877EFF]'>{authUser?.email}</h2> 
         </header>
         {userProfile ? <UserData /> : < ProfileNotFound/>}
       </article>
