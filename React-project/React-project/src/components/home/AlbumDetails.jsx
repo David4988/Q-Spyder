@@ -105,6 +105,7 @@ const AlbumDetails = () => {
                         <td className='text-center text-sm font-semibold'>{index+1}</td>
                         <td className='flex justify-center pl-10 py-4'><img src={song.songThumbnail} className='w-20 rounded' alt="" /></td>
                         <td className={`text-center text-sm font-semibold ${(currentSongIndex === index && isPlaying) ? `text-green-500` : ``}`}>{song.songName}</td>
+                        <td className='text-center text-sm font-semibold '>{song.songSingers}</td>
                         <td className='text-center text-sm font-semibold '>{song.songDirector}</td>
                         <td className='text-center text-sm font-semibold'>{`${songM}:${songS.toString().padStart(2,'0')}`}</td>
                     </tr>

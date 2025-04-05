@@ -24,7 +24,7 @@ const AlbumProvider = (props) =>{
 
                 const albumList = albumSnapshot.docs.map(doc=>doc.data())
                 // setAlbums(albumList)
-                setAlbums([...albumList, ...albumList, ...albumList])
+                setAlbums([...albumList])
             }catch(e){
                 toast.error(e)
             }
