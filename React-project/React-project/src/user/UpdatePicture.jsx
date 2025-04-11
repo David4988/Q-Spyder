@@ -75,12 +75,12 @@ const UpdatePicture = () => {
               ?
                 <img src={preview} className='h-32 w-32 rounded-full'/>
               : 
-              <div className='text-center bg-slate-700'>No image Selected</div>
+              <div className='text-center rounded-full bg-slate-700'>No image Selected</div>
             }
           </div>
           <label htmlFor="picture" className='block h-[100px] py-2 w-full text-center rounded-lg border border-dashed border-white'>Select a Photo</label>
           <input type='file' id = 'picture' name='picture' className='hidden' accept="image/*" onChange={handleChange}/> {/* //! We are hidding the input field and design the label */ }
-          <button className='py-2 w-full bg-blue-600 rounded-lg cursor-pointer hover:bg-blue-800'>Upload</button>
+          <button className='py-2 w-full bg-purple-700 rounded-lg cursor-pointer hover:bg-purple-800 '>Upload</button>
           
         </form>
         {isLoading && <Spinner />}

@@ -6,7 +6,6 @@ import { NavLink } from 'react-router-dom'
 
 const UserData = () => {
     const {userProfile} = useContext(UserContextAPI)
-    console.log(userProfile)
     
     
   return (

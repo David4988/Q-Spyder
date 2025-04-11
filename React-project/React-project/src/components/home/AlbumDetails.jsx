@@ -5,7 +5,6 @@ import { AlbumContextAPI } from '../../context/AlbumContext'
 const AlbumDetails = () => {
     let data = useLocation() //! getting the location object which has -> pathName, search, hash and state
     let {state:{album}} = data //! from the state, we are performing nested destructuring and extracting the album object
-    console.log(album)
 
     const {
         songs,
@@ -30,7 +29,7 @@ const AlbumDetails = () => {
     }
 
   return (
-    <section className='m-5 bg-gray-700 rounded '>
+    <section className='m-5 bg-gray-900 rounded '>
         <article className='w-full p-6 flex gap-6'>
         <aside className=''>
             <img src={album.albumPoster} className='rounded-md min-h-[370px] min-w-[320px]' alt="" />
@@ -83,7 +82,7 @@ const AlbumDetails = () => {
     </article>
     <main className={`text-white p-2 mt-4 rounded-lg w-full ${currentSongIndex !== null && "mb-14"}`}>
         <h3 className='text-xl px-4'>Song List</h3>
-        <table className='w-full mt-3 text-left bg-slate-900 uppercase rounded-lg overflow-hidden'>
+        <table className='w-full mt-3 text-left bg-slate-950 uppercase rounded-lg overflow-hidden'>
             <thead className='w-full'>
                 <tr className=''>
                     <th className='text-center px-3 py-2'></th>

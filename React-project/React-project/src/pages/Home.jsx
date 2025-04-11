@@ -17,7 +17,7 @@ const Home = () => {
       }=useContext(AlbumContextAPI)
   return (
     <>
-      <div className='flex flex-col bg-slate-900 min-h-[calc(100vh-70px)]'>
+      <div className='flex flex-col bg-slate-950 min-h-[calc(100vh-70px)]'>
         <div className='flex text-white'>
           <SideBar />
           <Outlet />

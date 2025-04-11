@@ -9,7 +9,6 @@ const AuthProvider = (props) => {
 
     useEffect(() =>{
     onAuthStateChanged(__AUTH,(userInfo)=>{ //! We are using it because, the same account may change some details later
-        console.log(userInfo);
 
         if(userInfo?.emailVerified === true){
             setAuthUser(userInfo) //! If the email is verified, we are updating the userInfo using setAuthUser()

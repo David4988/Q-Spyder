@@ -29,7 +29,7 @@ const UpdatePassword = () => {
         }
     }  
   return (
-    <section className="h-[calc(100vh-70px)] w-[100%] bg-slate-900 flex flex-col items-center justify-center">
+    <section className="h-[calc(100vh-70px)] w-[100%] bg-slate-950 flex flex-col items-center justify-center">
       
       <div className=" w-[30%] bg-slate-700 px-4 py-3 rounded-xl">
         <header></header>
@@ -56,14 +56,14 @@ const UpdatePassword = () => {
               <div className="flex justify-center px-1 pt-2 pb-1">
                 <button
                   type="submit"
-                  className="bg-blue-700 text-white py-2 px-4 rounded-md hover:bg-blue-900 hover:border-blue950 w-[100%] text-md font-semibold"
+                  className="bg-purple-700 text-white py-2 px-4 rounded-md hover:bg-purple-800 hover:border-blue950 w-[100%] text-md font-semibold"
                 >
                   Reset Password
                 </button>
               </div>
               <div className="flex justify-center text-sm  text-white  px-1">
                 
-                <NavLink to="/auth/login" className="bg-red-500 block w-[100%] text-md font-semibold text-center py-2 px-4 rounded-md">Cancel</NavLink>
+                <NavLink to="/auth/login" className="text-red-500 hover:text-red-600 block w-[100%] text-md font-semibold text-center py-2 px-4 rounded-md">Cancel</NavLink>
               </div>
             </div>
           </form>

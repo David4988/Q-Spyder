@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom'
 
 const Dashboard = () => {
     const {albums, isLoading} = useContext(AlbumContextAPI)
-    console.log(albums)
   return (
     <div className='p-5 pl-8'>
         <h2 className='font-semibold text-3xl px-5 pb-6'>Albums</h2>

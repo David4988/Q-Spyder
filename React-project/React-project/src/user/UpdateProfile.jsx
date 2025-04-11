@@ -94,7 +94,7 @@ const UpdateProfile = () => {
               <textarea type="text" id = "addr" name='addr' placeholder='' value={addr} onChange={handleChange} className='block text-[18px] bg-white text-black rounded-lg outline-none placeholder:text-black placeholder:px-3= p-2'/>
             </div>
           </article>
-          <button className='bg-blue-600 hover:bg-blue-800  px-4 py-2 rounded'>Submit</button>
+          <button className='bg-purple-700  hover:bg-purple-800  px-4 py-2 rounded'>Submit</button>
         </form>
       </article>
       {isLoading && <Spinner />}

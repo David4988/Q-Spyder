@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const SideBar = () => {
   return (
-    <div className='h-[calc(100vh-70px)] w-1/5 sticky top-[70px] bg-slate-800 shrink-0'>
+    <div className='h-[calc(100vh-70px)] w-1/5 sticky top-[70px] bg-slate-900 shrink-0'>
       <ul className='flex flex-col my-6 mx-4 justify-center relative gap-3 text-white'>
         <li className=' font-semibold flex flex-col gap-4'>
           <NavLink to="/" className={(obj) => {

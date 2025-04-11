@@ -5,7 +5,7 @@ import { AiFillPicture } from "react-icons/ai";
 
 const UserSidebar = () => {
   return (
-    <div className='h-[100%] w-1/5 bg-slate-600 shrink-0'>
+    <div className='h-[100%] w-1/5 bg-slate-900 shrink-0'>
       <ul className='flex flex-col my-2 mx-4 justify-center relative gap-3'>
         <li className='text-white  font-semibold '>
           <NavLink to="/user-profile" end className={(obj)=>{

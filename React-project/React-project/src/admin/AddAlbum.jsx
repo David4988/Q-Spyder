@@ -280,7 +280,7 @@ const AddAlbum = () => {
             })}
           
           </article>
-          <button className='w-full py-2 cursor-pointer rounded-lg bg-purple-600 mt-5'>Upload Album</button>
+          <button className='w-full py-2 cursor-pointer rounded-lg bg-purple-600 hover:bg-purple-700 mt-5'>Upload Album</button>
         </form>
       </article>
       {isLoading && <Spinner />}
