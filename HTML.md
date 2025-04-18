@@ -12,7 +12,7 @@
 
 ### How a website works
 
- ![Day1 Image](BasicsofInternet.png "Basics of Internet")
+ ![Day1 Image](./Day1/BasicsofInternet.png "Basics of Internet")
 
 #### * HTTP (Hypertext Transfer Protocol) /
 
